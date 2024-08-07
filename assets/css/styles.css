@@ -31,9 +31,12 @@ main {
     top: 0;
 }
 
-#overlay-how-to-play {
+#overlay-how-to-play,
+#overlay-leader-board {
+    display: none;
     width: 99%;
     margin: 50% auto;
     background: #e4d105;
     color: #000;
+
 }
