@@ -30,3 +30,10 @@ main {
     position: absolute;
     top: 0;
 }
+
+#overlay-how-to-play {
+    width: 99%;
+    margin: 50% auto;
+    background: #e4d105;
+    color: #000;
+}
