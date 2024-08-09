@@ -26,17 +26,31 @@
     padding-top: 1px;
 }
 
-main {
-    position: absolute;
-    top: 0;
-}
 
 #overlay-how-to-play,
-#overlay-leader-board {
+#overlay-leader-board,
+#game-container {
     display: none;
     width: 99%;
     margin: 50% auto;
     background: #e4d105;
     color: #000;
 
+}
+
+#game-container {
+    position: absolute;
+    top: 0;
+    background: black;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+}
+
+#game-level {
+    width: 80%;
+    margin: 10px auto;
+    border: solid 2px white;
 }
