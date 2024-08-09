@@ -25,37 +25,52 @@
         <p id="begin">Let's Begin!</p>
     </div>
 
-    <main>
+
+
+    <section id="entry-controls-container">
         <header>
             <h1>Welcome To</h1>
         </header>
-        <section id="entry-container">
-            <h2 class="hidden"></h2>
-            <label for="player">Enter Your Name</label>
-            <input type="text" name="player" id="player" required>
-            <button id="start-game">Start Quiz</button>
-            <button id="howToPlay">How To Play</button>
-            <button id="leader-board">Leader Board</button>
-        </section>
-        <div id="overlay-how-to-play">
-            <h2>How To Play</h2>
-            <ol>
-                <li>Enter your Name</li>
-                <li>Choose your difficulty</li>
-                <li>You need to score 50% or more to move to the next level.</li>
-                <li>The succes of your completed levels will be displayed.</li>
-            </ol>
+        <label for="player-name">Enter Your Name</label>
+        <input type="text" name="player-name" id="player-name" required>
+        <button id="start-game">Start Quiz</a></button>
+        <button id="howToPlay">How To Play</button>
+        <button id="leader-board">Leader Board</button>
+    </section>
+    <div id="overlay-how-to-play">
+        <h2>How To Play</h2>
+        <ol>
+            <li>Enter your Name</li>
+            <li>Choose your difficulty</li>
+            <li>You need to score 50% or more to move to the next level.</li>
+            <li>The succes of your completed levels will be displayed.</li>
+        </ol>
+    </div>
+    <div id="overlay-leader-board">
+        <ol>
+            <li>The Neo 500</li>
+            <li>Anderson 450</li>
+            <li>Finn 400</li>
+            <li>Alice 399</li>
+            <li>Jane 350</li>
+        </ol>
+    </div>
+
+    <section id="game-container">
+        <h1>The Matrix Quiz</h1>
+        <header id="level-questions-numbers">
+            <h2 id="level-header">Level <span id="level-number">1</span> </h2>
+
+            <h2 id="questions"><span id="numOn">1</span>/ <span id="totalNum">10</span>
+            </h2>
+        </header>
+
+
+        <div id="game-level">
+
         </div>
-        <div id="overlay-leader-board">
-            <ol>
-                <li>The Neo 500</li>
-                <li>Anderson 450</li>
-                <li>Finn 400</li>
-                <li>Alice 399</li>
-                <li>Jane 350</li>
-            </ol>
-        </div>
-    </main>
+    </section>
+
 
     <script src="assets/js/script.js"></script>
 </body>
