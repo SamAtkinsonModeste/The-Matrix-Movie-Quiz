@@ -1,10 +1,11 @@
-//Function to get rid of the overlay and then 
-// then control the buttons on the main.
+
+
 
 /**
  * Control over home overlay
  * once the dom is loaded
- * user can click the begin button
+ * user can click the begin button to hide overlay home
+ * function gameEntryButons gives the user control of the game start, info and leader board buttons
  */
 document.addEventListener("DOMContentLoaded", ()=> {
     let begin = document.getElementById('begin');
@@ -34,6 +35,7 @@ function gameEntryButtons () {
     const overlayHowToPlay = document.getElementById('overlay-how-to-play');
     const overlayLeaderBoard = document.getElementById('overlay-leader-board');
 
+
     //users name input
 let playerName= document.getElementById('player-name');
 playerName.addEventListener('keydown',(evt)=> {
@@ -47,7 +49,7 @@ playerName.addEventListener('keydown',(evt)=> {
   }
 });
 
-//quiz buttons start-quiz, how to play and leader board controls
+//buttons: start-quiz, how to play and leader board controls
 let btns = document.getElementsByTagName('button');
 
 for (let btn of btns) {
@@ -59,7 +61,9 @@ for (let btn of btns) {
             alert("You must enter your name first");
             
            } else {
-            location.href ="game.html";
+            document.getElementById('game-container').style.display = "block";
+            document.getElementById('entry-controls-container').style.display = "none";
+            
            }
 
         } else if (this.getAttribute('id') === 'howToPlay'){
@@ -70,10 +74,20 @@ for (let btn of btns) {
     });
 }
 
-
-
-
  
 }
- 
+
+
+/**
+ * random array function
+ * resuffles an array items order every time it is called
+ * you can pass any array as the argument
+ */
+function randomArray (arr) {
+    //below resuffles the order of the arrays items
+  const randomArrItem = arr.sort(()=> Math.random() - .5);
+  return randomArrItem;
+} 
   
+
+
