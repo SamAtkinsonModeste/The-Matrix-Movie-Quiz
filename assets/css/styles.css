@@ -34,7 +34,6 @@ img {
 #overlay-how-to-play,
 #overlay-leader-board,
 #game-container {
-    display: none;
     width: 99%;
     margin: 50% auto;
     background: #e4d105;
@@ -61,4 +60,9 @@ img {
 
 #character-image {
     width: 25%;
+}
+
+
+.hide {
+    display: none;
 }
