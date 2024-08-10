@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div id="overlay-home">
+    <div id="overlay-home" class="overlay-home">
         <h1>Welcome to "The Matrix" Quiz</h1>
         <p>Dive into the world of Neo, Trinity, and Morpheus.
             Whether you’re a die-hard fan or a curious newcomer,
@@ -27,7 +27,7 @@
 
 
 
-    <section id="entry-controls-container">
+    <section id="entry-controls-container" class="hide">
         <header>
             <h1>Welcome To</h1>
         </header>
@@ -37,7 +37,8 @@
         <button id="howToPlay">How To Play</button>
         <button id="leader-board">Leader Board</button>
     </section>
-    <div id="overlay-how-to-play">
+    <div id="overlay-how-to-play" class="hide">
+        <button id="close-HowTo-btn" class="close">X</button>
         <h2>How To Play</h2>
         <ol>
             <li>Enter your Name</li>
@@ -46,7 +47,8 @@
             <li>The succes of your completed levels will be displayed.</li>
         </ol>
     </div>
-    <div id="overlay-leader-board">
+    <div id="overlay-leader-board" class="hide">
+        <button id="close-leaderBoard-btn" class="close">X</button>
         <ol>
             <li>The Neo 500</li>
             <li>Anderson 450</li>
@@ -56,7 +58,7 @@
         </ol>
     </div>
 
-    <section id="game-container">
+    <section id="game-container" class="hide">
         <h1>The Matrix Quiz</h1>
         <header id="level-questions-numbers">
             <h2 id="level-header">Level <span id="level-number">1</span> </h2>
@@ -74,7 +76,10 @@
             <div id="answer-options">
 
             </div>
-
+            <div id="home-next-buttons">
+                <button id="homeBtn">Home</button>
+                <button id="nextBtn" class="hide">Next</button>
+            </div>
         </div>
     </section>
 
