@@ -122,3 +122,31 @@ function displayOptionsImage(level) {
 displayOptionsImage(levelOne);
 
 
+/**
+ * selected answer function: 
+ *  When a radio button is checked.
+ *  It is checked for the class "correct".
+ *  If it has it then alert "awesome".
+ *  If not alert "do you really like the Matrix". 
+ */
+
+function selectedAnswer (){
+    console.log(document.querySelectorAll('input[type="radio"]'));
+    const radioBtns = document.querySelectorAll('input[name="character"]');
+      for(let btn of radioBtns) {
+        btn.addEventListener('change', function(evt) {
+             if(this.evt === evt.checked) {
+               console.log(btn);
+               if(btn.classList.contains('correct')) {
+                 alert("your awesome!!!");
+               } else {
+                alert('Do you really like the Matrix?!');
+               }
+             }
+        });
+      }
+}
+
+selectedAnswer();
+
+
