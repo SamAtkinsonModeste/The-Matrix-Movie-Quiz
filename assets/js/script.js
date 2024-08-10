@@ -1,4 +1,4 @@
-
+let currentLevelIndex;
 
 
 /**
@@ -89,5 +89,36 @@ function randomArray (arr) {
   return randomArrItem;
 } 
   
+
+
+/**
+ * display answer options and question image function.
+ * set the options for answers. 
+ * set the image for the question.
+ * set all data within html.
+ */
+
+function displayOptionsImage(level) {
+  let round = randomArray(level);
+  currentLevelIndex = 0;
+   console.log(round[currentLevelIndex]);
+   
+   let ulHTML = `<ul>`;
+   
+  round[currentLevelIndex].answers.forEach(answer => {
+    let li = answer.options;
+    ulHTML += `${li}`;
+
+  });
+   
+  ulHTML += `</ul>`;
+  console.log(ulHTML);
+   document.getElementById('character-image').innerHTML = round[currentLevelIndex].pic;
+   document.getElementById('answer-options').innerHTML = ulHTML;
+  
+   
+}
+
+displayOptionsImage(levelOne);
 
 
