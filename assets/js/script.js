@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
     let begin = document.getElementById('begin');
     begin.addEventListener('click', ()=> {
         let overlayHome = document.getElementById('overlay-home');
-       overlayHome.style.display = "none";
+       overlayHome.classList.add('hide');
+       document.getElementById('entry-controls-container').classList.remove('hide');
        document.getElementById('player-name').focus();
     });
     
@@ -61,15 +62,16 @@ for (let btn of btns) {
             alert("You must enter your name first");
             
            } else {
-            document.getElementById('game-container').style.display = "block";
-            document.getElementById('entry-controls-container').style.display = "none";
+            document.getElementById('game-container').classList.remove('hide');
+            document.getElementById('entry-controls-container').classList.add('hide');
+            
             
            }
 
         } else if (this.getAttribute('id') === 'howToPlay'){
-            overlayHowToPlay.style.display = "block";
+            overlayHowToPlay.classList.remove('hide');
         } else if (this.getAttribute('id') === 'leader-board') {
-           overlayLeaderBoard.style.display = "block";
+           overlayLeaderBoard.classList.remove('hide');
         }
     });
 }
@@ -148,5 +150,12 @@ function selectedAnswer (){
 }
 
 selectedAnswer();
+
+
+/**
+ * score function
+ */
+
+
 
 
