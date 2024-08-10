@@ -1,4 +1,4 @@
-let currentLevelIndex;
+let currentLevelIndex, currentScore;
 
 
 /**
@@ -22,35 +22,32 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
 /**
  * event listeners on all buttons for entry to the quiz includes:
- * 
- * user name input
- * 
- * button to start the quiz
- * 
- * button to open "How To Play"
- * 
- * button to open Leader Board
+ * 1.User name input.
+ * 2.Button to start the quiz.
+ * 3.Button to open "How To Play".
+ * 4.Button to open Leader Board.
+ * 5.Buttons to close "How To Play" & Leader Board.
  */
 function gameEntryButtons () {
-    //overlays for how to play and leader board
+    //Variables for overlays "how to play" and leader-board
     const overlayHowToPlay = document.getElementById('overlay-how-to-play');
     const overlayLeaderBoard = document.getElementById('overlay-leader-board');
 
 
-    //users name input
-let playerName= document.getElementById('player-name');
-playerName.addEventListener('keydown',(evt)=> {
-  if (evt.key === "Enter") {
-    if(playerName.value === "") {
-       alert("You need to add your name");
-    } else {
-        playerName.style.backgroundColor = "blue";
-    }
-    console.log("name entered");
-  }
-});
+      //Variable for users name input
+  const playerName= document.getElementById('player-name');
+    playerName.addEventListener('keydown',(evt)=> {
+      if (evt.key === "Enter") {
+        if(playerName.value === "") {
+          alert("You need to add your name");
+        } else {
+            playerName.style.backgroundColor = "blue";
+        }
+        console.log("name entered");
+      }
+    });
 
-//buttons: start-quiz, how to play and leader board controls
+//Variable for all buttons: start-quiz, how to play and leader board controls
 let btns = document.getElementsByTagName('button');
 
 for (let btn of btns) {
@@ -64,18 +61,21 @@ for (let btn of btns) {
            } else {
             document.getElementById('game-container').classList.remove('hide');
             document.getElementById('entry-controls-container').classList.add('hide');
-            
-            
+            playGame(levelOne);
            }
 
         } else if (this.getAttribute('id') === 'howToPlay'){
             overlayHowToPlay.classList.remove('hide');
+        } else if (this.getAttribute('id') === 'close-HowTo-btn'){
+          overlayHowToPlay.classList.add('hide');
         } else if (this.getAttribute('id') === 'leader-board') {
            overlayLeaderBoard.classList.remove('hide');
+        } else if (this.getAttribute('id') === 'close-leaderBoard-btn') {
+          overlayLeaderBoard.classList.add('hide');
         }
     });
 }
-
+console.log(btns);
  
 }
 
@@ -95,28 +95,50 @@ function randomArray (arr) {
 
 /**
  * display answer options and question image function.
- * set the options for answers. 
- * set the image for the question.
- * set all data within html.
+ * Insert the options into element "answer-options" div. 
+ * Insert the image for the question into element "charcter-image".
+ * HTML template used to insert the data.
  */
-
+//TODO: Rename this function
 function displayOptionsImage(level) {
-  let round = randomArray(level);
-  currentLevelIndex = 0;
-   console.log(round[currentLevelIndex]);
+const gameContainer = document.getElementById('game-container');
+const gameButtons = gameContainer.getElementsByTagName('button');
+  //Variable for the randomArray function
+   level = randomArray(level);
+   currentLevelIndex = 0;
    
    let ulHTML = `<ul>`;
    
-  round[currentLevelIndex].answers.forEach(answer => {
-    let li = answer.options;
-    ulHTML += `${li}`;
+      level[currentLevelIndex].answers.forEach(answer => {
+        let li = answer.options;
+        ulHTML += `${li}`;
 
-  });
+      });
    
   ulHTML += `</ul>`;
-  console.log(ulHTML);
-   document.getElementById('character-image').innerHTML = round[currentLevelIndex].pic;
+ 
+
+   document.getElementById('character-image').innerHTML = level[currentLevelIndex].pic;
    document.getElementById('answer-options').innerHTML = ulHTML;
+   gameButtons[1].classList.remove('hide');
+console.log(gameButtons[1]);
+
+   for(let btn of gameButtons) {
+        btn.addEventListener('click', function() {
+
+            if (this.getAttribute('id') === 'homeBtn') {
+            alert('Are you sure you want to leave the game?  You will lose your progress.');
+            gameContainer.classList.add('hide');
+            document.getElementById('entry-controls-container').classList.remove('hide');
+               resetGame();
+            }
+
+            if (this.getAttribute('id') === 'nextBtn') {
+              alert('Next question function please');
+            }
+        });
+   } 
+  
   
    
 }
@@ -132,30 +154,52 @@ displayOptionsImage(levelOne);
  *  If not alert "do you really like the Matrix". 
  */
 
-function selectedAnswer (){
+function checkAnswers (){
     console.log(document.querySelectorAll('input[type="radio"]'));
     const radioBtns = document.querySelectorAll('input[name="character"]');
-      for(let btn of radioBtns) {
-        btn.addEventListener('change', function(evt) {
-             if(this.evt === evt.checked) {
-               console.log(btn);
-               if(btn.classList.contains('correct')) {
-                 alert("your awesome!!!");
-               } else {
-                alert('Do you really like the Matrix?!');
-               }
-             }
-        });
-      }
+        for(let btn of radioBtns) {
+            btn.addEventListener('change', function(evt) {
+                if(this.evt === evt.checked) {
+                  console.log(btn);
+                  if(btn.classList.contains('correct')) {
+                    alert("your awesome!!!");
+                  } else {
+                    alert('Do you really like the Matrix?!');
+                  }
+                }
+            });
+        }
 }
 
-selectedAnswer();
+checkAnswers();
 
 
 /**
- * score function
+ * resetGame function
  */
 
+function resetGame() {
+  document.getElementById('player-name').value = "";
+  document.getElementById('player-name').focus();
+  const radioBtns = document.querySelectorAll('input[name="character"]');
+  for(let btn of radioBtns) {
+    if (btn.checked === true) {
+      console.log(btn);
+      btn.checked = false;
+      console.log(btn)
+    }
+      
+  }
+}
+
+
+/**
+ * playGame function
+ */
+
+function playGame(question) {
+  displayOptionsImage(question);
+}
 
 
 
