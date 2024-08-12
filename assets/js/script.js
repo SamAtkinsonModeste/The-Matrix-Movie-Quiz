@@ -1,4 +1,5 @@
-let currentLevelIndex, currentScore;
+let randomCharacter,currentQuestionIndex; 
+let currentScore = 0;
 
 
 /**
@@ -17,6 +18,9 @@ document.addEventListener("DOMContentLoaded", ()=> {
     });
     
     gameEntryButtons();
+
+    const startQuizBtn = document.getElementById('start-game');
+    startQuizBtn.addEventListener('click', startQuiz);
 });
 
 
@@ -33,38 +37,12 @@ function gameEntryButtons () {
     const overlayHowToPlay = document.getElementById('overlay-how-to-play');
     const overlayLeaderBoard = document.getElementById('overlay-leader-board');
 
-
-      //Variable for users name input
-  const playerName= document.getElementById('player-name');
-    playerName.addEventListener('keydown',(evt)=> {
-      if (evt.key === "Enter") {
-        if(playerName.value === "") {
-          alert("You need to add your name");
-        } else {
-            playerName.style.backgroundColor = "blue";
-        }
-        console.log("name entered");
-      }
-    });
-
 //Variable for all buttons: start-quiz, how to play and leader board controls
 let btns = document.getElementsByTagName('button');
 
 for (let btn of btns) {
     btn.addEventListener('click', function() {
-        if (this.getAttribute('id') === 'start-game') {
-            
-
-           if (playerName.value === "") {
-            alert("You must enter your name first");
-            
-           } else {
-            document.getElementById('game-container').classList.remove('hide');
-            document.getElementById('entry-controls-container').classList.add('hide');
-            playGame(levelOne);
-           }
-
-        } else if (this.getAttribute('id') === 'howToPlay'){
+         if (this.getAttribute('id') === 'howToPlay'){
             overlayHowToPlay.classList.remove('hide');
         } else if (this.getAttribute('id') === 'close-HowTo-btn'){
           overlayHowToPlay.classList.add('hide');
@@ -75,7 +53,6 @@ for (let btn of btns) {
         }
     });
 }
-console.log(btns);
  
 }
 
@@ -86,92 +63,90 @@ console.log(btns);
  * you can pass any array as the argument
  */
 function randomArray (arr) {
-    //below resuffles the order of the arrays items
-  const randomArrItem = arr.sort(()=> Math.random() - .5);
-  return randomArrItem;
+  //below resuffles the order of the arrays items
+const randomArrItem = arr.sort(()=> Math.random() - .5);
+return randomArrItem;
 } 
-  
+
+/**
+ * function start quiz
+ * Checks user's input has a value.
+ * level parameter allows a change of data, a different set of questions
+ * setNextCharacter function is called.
+ */
+function startQuiz(level) {
+  const playerName= document.getElementById('player-name');
+  if(playerName.value === "") {
+    alert('You need to enter your name first!');
+  } else {
+    if(playerName.value !== "") {
+      document.getElementById('game-container').classList.remove('hide');
+    }
+  }
+  level = levelOne;
+  randomCharacter = randomArray(level);
+  console.log(randomCharacter);
+  currentQuestionIndex = 0;
+  setNextCharacter();
+
+}
+
+/**
+ * setNextCharacter Function
+ */
+
+function setNextCharacter() {
+  displayCharacterOptions(randomCharacter[currentQuestionIndex]);
+}
 
 
 /**
- * display answer options and question image function.
- * Insert the options into element "answer-options" div. 
- * Insert the image for the question into element "charcter-image".
- * HTML template used to insert the data.
+ * show options and character image function
+ * Uses template literals to add:
+ * 1 .Image of character.
+ * 2. Options/answers who th character is.
  */
-//TODO: Rename this function
-function displayOptionsImage(level) {
-const gameContainer = document.getElementById('game-container');
-const gameButtons = gameContainer.getElementsByTagName('button');
-  //Variable for the randomArray function
-   level = randomArray(level);
-   currentLevelIndex = 0;
-   
-   let ulHTML = `<ul>`;
-   
-      level[currentLevelIndex].answers.forEach(answer => {
-        let li = answer.options;
-        ulHTML += `${li}`;
 
-      });
-   
+function displayCharacterOptions(character) {
+  const gameContainer = document.getElementById('game-container');
+  const gameButtons = gameContainer.getElementsByTagName('button');
+  gameButtons[1].classList.remove('hide');
+
+  document.getElementById('character-image').innerHTML = character.pic;
+
+  let ulHTML = `<ul>`;
+
+  character.answers.forEach(answer => {
+    answer = answer.options;
+    let li = answer;
+    ulHTML += `${li}`;
+  
+  });
+
   ulHTML += `</ul>`;
- 
+  document.getElementById('answer-options').innerHTML = ulHTML;
 
-   document.getElementById('character-image').innerHTML = level[currentLevelIndex].pic;
-   document.getElementById('answer-options').innerHTML = ulHTML;
-   gameButtons[1].classList.remove('hide');
-console.log(gameButtons[1]);
+  for(let btn of gameButtons) {
+    btn.addEventListener('click', function() {
 
-   for(let btn of gameButtons) {
-        btn.addEventListener('click', function() {
-
-            if (this.getAttribute('id') === 'homeBtn') {
-            alert('Are you sure you want to leave the game?  You will lose your progress.');
-            gameContainer.classList.add('hide');
-            document.getElementById('entry-controls-container').classList.remove('hide');
-               resetGame();
-            }
-
-            if (this.getAttribute('id') === 'nextBtn') {
-              alert('Next question function please');
-            }
-        });
-   } 
-  
-  
-   
-}
-
-displayOptionsImage(levelOne);
-
-
-/**
- * selected answer function: 
- *  When a radio button is checked.
- *  It is checked for the class "correct".
- *  If it has it then alert "awesome".
- *  If not alert "do you really like the Matrix". 
- */
-
-function checkAnswers (){
-    console.log(document.querySelectorAll('input[type="radio"]'));
-    const radioBtns = document.querySelectorAll('input[name="character"]');
-        for(let btn of radioBtns) {
-            btn.addEventListener('change', function(evt) {
-                if(this.evt === evt.checked) {
-                  console.log(btn);
-                  if(btn.classList.contains('correct')) {
-                    alert("your awesome!!!");
-                  } else {
-                    alert('Do you really like the Matrix?!');
-                  }
-                }
-            });
+      if (this.getAttribute('id') === 'homeBtn') {
+        alert('Are you sure you want to leave the game?  You will lose your progress.');
+        document.getElementById('entry-controls-container').classList.remove('hide');
+        gameContainer.classList.add('hide');
+           resetGame();
         }
+
+        if (this.getAttribute('id') === 'nextBtn') {
+          alert("You clicked the next button");
+        }
+
+    });
+  
+  }
+
+
 }
 
-checkAnswers();
 
 
 /**
@@ -184,22 +159,8 @@ function resetGame() {
   const radioBtns = document.querySelectorAll('input[name="character"]');
   for(let btn of radioBtns) {
     if (btn.checked === true) {
-      console.log(btn);
       btn.checked = false;
-      console.log(btn)
-    }
-      
+    }  
   }
+
 }
-
-
-/**
- * playGame function
- */
-
-function playGame(question) {
-  displayOptionsImage(question);
-}
-
-
-
