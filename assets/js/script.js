@@ -1,5 +1,6 @@
 let randomCharacter,currentQuestionIndex; 
 let currentScore = 0;
+// let Alert = new customAlert();
 
 
 /**
@@ -96,11 +97,13 @@ function startQuiz(level) {
 
 /**
  * setNextCharacter Function
+ * Calls displayCharacterOptions function
+ * and passes in the array and it's current index as the argument
  */
 
 function setNextCharacter() {
   displayCharacterOptions(randomCharacter[currentQuestionIndex]);
-  
+ 
 }
 
 
@@ -129,6 +132,7 @@ function displayCharacterOptions(character) {
   document.getElementById('answer-options').innerHTML = ulHTML;
 
   homeBtn.addEventListener('click', homeButton);
+  nextBtn.addEventListener('click', nextButton);
   
 
 }
@@ -149,6 +153,23 @@ function homeButton() {
     document.getElementById('entry-controls-container').classList.remove('hide');
     resetGame();
   }
+
+
+  /**
+ * Next Button function
+ * alerts user losing progress to return to entry of game.
+ * Hides the game container
+ * resetGame() function is called.
+ */
+
+function nextButton() {
+ currentQuestionIndex ++;
+ setNextCharacter();
+
+ if(randomCharacter.length > currentQuestionIndex + 1) {
+  console.log('I am the last one');
+ }
+}
 
 /**
  * resetGame function -
