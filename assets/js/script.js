@@ -88,8 +88,11 @@ function startQuiz(level) {
   console.log(randomCharacter);
   currentQuestionIndex = 0;
   setNextCharacter();
+  console.log(randomCharacter[currentQuestionIndex]);
 
 }
+
+
 
 /**
  * setNextCharacter Function
@@ -97,6 +100,7 @@ function startQuiz(level) {
 
 function setNextCharacter() {
   displayCharacterOptions(randomCharacter[currentQuestionIndex]);
+  
 }
 
 
@@ -108,10 +112,8 @@ function setNextCharacter() {
  */
 
 function displayCharacterOptions(character) {
-  const gameContainer = document.getElementById('game-container');
-  const gameButtons = gameContainer.getElementsByTagName('button');
-  gameButtons[1].classList.remove('hide');
-
+  const homeBtn = document.getElementById('homeBtn');
+  const nextBtn = document.getElementById('nextBtn');
   document.getElementById('character-image').innerHTML = character.pic;
 
   let ulHTML = `<ul>`;
@@ -126,31 +128,33 @@ function displayCharacterOptions(character) {
   ulHTML += `</ul>`;
   document.getElementById('answer-options').innerHTML = ulHTML;
 
-  for(let btn of gameButtons) {
-    btn.addEventListener('click', function() {
-
-      if (this.getAttribute('id') === 'homeBtn') {
-        alert('Are you sure you want to leave the game?  You will lose your progress.');
-        document.getElementById('entry-controls-container').classList.remove('hide');
-        gameContainer.classList.add('hide');
-           resetGame();
-        }
-
-        if (this.getAttribute('id') === 'nextBtn') {
-          alert("You clicked the next button");
-        }
-
-    });
+  homeBtn.addEventListener('click', homeButton);
   
-  }
-
 
 }
 
 
+/**
+ * Home Button function
+ * alerts user losing progress to return to entry of game.
+ * Hides the game container
+ * resetGame() function is called.
+ */
+
+function homeButton() {
+  const gameContainer = document.getElementById('game-container');
+  console.log('clicked!!!!!');
+    alert('Are you sure you want to leave the game?  You will lose your progress.');
+    gameContainer.classList.add('hide');
+    document.getElementById('entry-controls-container').classList.remove('hide');
+    resetGame();
+  }
 
 /**
- * resetGame function
+ * resetGame function -
+ * Resets the users input to an empty string.
+ * sets the user input to focus.
+ * Unchecks any radio buttons.
  */
 
 function resetGame() {
