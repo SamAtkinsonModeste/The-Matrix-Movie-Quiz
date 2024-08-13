@@ -33,7 +33,8 @@ img {
 
 #overlay-how-to-play,
 #overlay-leader-board,
-#game-container {
+#game-container,
+#user-score {
     width: 99%;
     margin: 50% auto;
     background: #e4d105;
