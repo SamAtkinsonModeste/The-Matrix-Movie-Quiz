@@ -1,5 +1,14 @@
 let randomCharacter,currentQuestionIndex; 
 let currentScore = 0;
+const homeBtn = document.getElementById('homeBtn');
+const nextBtn = document.getElementById('nextBtn');
+const submitBtn = document.getElementById('submitBtn');
+const optionsContainer = document.getElementById('answer-options');
+const usersScore = document.getElementById('users-score');
+const overlayHowToPlay = document.getElementById('overlay-how-to-play');
+const overlayLeaderBoard = document.getElementById('overlay-leader-board');
+
+
 // let Alert = new customAlert();
 
 
@@ -18,26 +27,29 @@ document.addEventListener("DOMContentLoaded", ()=> {
        document.getElementById('player-name').focus();
     });
     
+    //NOTE: gameEntry Function called
     gameEntryButtons();
 
     const startQuizBtn = document.getElementById('start-game');
     startQuizBtn.addEventListener('click', startQuiz);
+    nextBtn.addEventListener('click', function(){
+      currentQuestionIndex++;
+      setNextCharacter();
+    });
+
+    homeBtn.addEventListener('click', homeBtnClear);
 });
 
 
 /**
- * event listeners on all buttons for entry to the quiz includes:
- * 1.User name input.
- * 2.Button to start the quiz.
- * 3.Button to open "How To Play".
- * 4.Button to open Leader Board.
- * 5.Buttons to close "How To Play" & Leader Board.
+ * event listeners on buttons for the quiz includes:
+ * 1.Button to open "How To Play".
+ * 2.Button to open Leader Board.
+ * 3.Buttons to close "How To Play" & Leader Board.
  */
 function gameEntryButtons () {
     //Variables for overlays "how to play" and leader-board
-    const overlayHowToPlay = document.getElementById('overlay-how-to-play');
-    const overlayLeaderBoard = document.getElementById('overlay-leader-board');
-
+    
 //Variable for all buttons: start-quiz, how to play and leader board controls
 let btns = document.getElementsByTagName('button');
 
@@ -77,16 +89,17 @@ return randomArrItem;
  */
 function startQuiz(level) {
   const playerName= document.getElementById('player-name');
-  if(playerName.value === "") {
-    alert('You need to enter your name first!');
-  } else {
-    if(playerName.value !== "") {
-      document.getElementById('game-container').classList.remove('hide');
-    }
-  }
+      if(playerName.value === "") {
+        alert('You need to enter your name first!');
+      } else {
+        if(playerName.value !== "") {
+          document.getElementById('game-container').classList.remove('hide');
+        }
+      }
+
   level = levelOne;
   randomCharacter = randomArray(level);
-  console.log(randomCharacter);
+  console.log(randomCharacter.length, "I'm in the startQuiz function");
   currentQuestionIndex = 0;
   setNextCharacter();
   console.log(randomCharacter[currentQuestionIndex]);
@@ -102,7 +115,9 @@ function startQuiz(level) {
  */
 
 function setNextCharacter() {
+  resetButton();
   displayCharacterOptions(randomCharacter[currentQuestionIndex]);
+
  
 }
 
@@ -111,81 +126,74 @@ function setNextCharacter() {
  * show options and character image function
  * Uses template literals to add:
  * 1 .Image of character.
- * 2. Options/answers who th character is.
+ * 2. Options/answers to who the character is.
  */
 
-function displayCharacterOptions(character) {
-  const homeBtn = document.getElementById('homeBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  document.getElementById('character-image').innerHTML = character.pic;
+function displayCharacterOptions(option) {
 
   let ulHTML = `<ul>`;
 
-  character.answers.forEach(answer => {
-    answer = answer.options;
-    let li = answer;
-    ulHTML += `${li}`;
-  
-  });
+      option.answers.forEach(answer => {
+        let li = answer.options;
+        ulHTML += `${li}`;
+      
+      });
 
-  ulHTML += `</ul>`;
+      ulHTML += `</ul>`;
+
+  document.getElementById('character-image').innerHTML = option.pic;
   document.getElementById('answer-options').innerHTML = ulHTML;
+  console.log(optionsContainer);
+  optionsContainer.addEventListener('click', catchAnswers);
 
-  homeBtn.addEventListener('click', homeButton);
-  nextBtn.addEventListener('click', nextButton);
   
 
 }
 
-
 /**
- * Home Button function
- * alerts user losing progress to return to entry of game.
- * Hides the game container
- * resetGame() function is called.
+ * catch Answers
  */
+//NOTE: Golbal Array
+const usersRadioBtns = [];
+const imagesOfusersQuestions = [];
 
-function homeButton() {
-  const gameContainer = document.getElementById('game-container');
-  console.log('clicked!!!!!');
-    alert('Are you sure you want to leave the game?  You will lose your progress.');
-    gameContainer.classList.add('hide');
-    document.getElementById('entry-controls-container').classList.remove('hide');
-    resetGame();
+
+
+function catchAnswers(evt){
+  const selectedBtn = evt.target;
+  const radioBtn = selectedBtn;
+  const wholeKit = randomCharacter[currentQuestionIndex];
+  console.log(wholeKit);
+  if(radioBtn.tagName === 'INPUT'){
+    console.log(radioBtn);
+    usersRadioBtns.push(radioBtn);
   }
 
+  imagesOfusersQuestions.push(wholeKit.pic);
+  console.log(usersRadioBtns);
+  console.log(imagesOfusersQuestions);
+   
+  if(randomCharacter.length > currentQuestionIndex + 1) {
+    nextBtn.classList.remove('hide');
+  } else {
+    submitBtn.classList.remove('hide');
+  }
 
-  /**
- * Next Button function
- * alerts user losing progress to return to entry of game.
- * Hides the game container
- * resetGame() function is called.
- */
-
-function nextButton() {
- currentQuestionIndex ++;
- setNextCharacter();
-
- if(randomCharacter.length > currentQuestionIndex + 1) {
-  console.log('I am the last one');
- }
 }
 
+
 /**
- * resetGame function -
- * Resets the users input to an empty string.
- * sets the user input to focus.
- * Unchecks any radio buttons.
+ * toggles nextBtn hide class on
+ */
+function resetButton() {
+  nextBtn.classList.add('hide');
+}
+
+
+/**
+ * clears all
  */
 
-function resetGame() {
-  document.getElementById('player-name').value = "";
-  document.getElementById('player-name').focus();
-  const radioBtns = document.querySelectorAll('input[name="character"]');
-  for(let btn of radioBtns) {
-    if (btn.checked === true) {
-      btn.checked = false;
-    }  
-  }
-
+function homeBtnClear() {
+  alert('You clicked the home button');
 }
