@@ -99,7 +99,6 @@ function startQuiz(level) {
 
   level = levelOne;
   randomCharacter = randomArray(level);
-  console.log(randomCharacter.length, "I'm in the startQuiz function");
   currentQuestionIndex = 0;
   setNextCharacter();
   console.log(randomCharacter[currentQuestionIndex]);
@@ -143,7 +142,6 @@ function displayCharacterOptions(option) {
 
   document.getElementById('character-image').innerHTML = option.pic;
   document.getElementById('answer-options').innerHTML = ulHTML;
-  console.log(optionsContainer);
   optionsContainer.addEventListener('click', catchAnswers);
 
   
@@ -153,9 +151,9 @@ function displayCharacterOptions(option) {
 /**
  * catch Answers
  */
-//NOTE: Golbal Array
-const usersRadioBtns = [];
-const imagesOfusersQuestions = [];
+//NOTE: Global Array
+let usersRadioBtns = [];
+let imagesOfusersQuestions = [];
 
 
 
@@ -163,9 +161,7 @@ function catchAnswers(evt){
   const selectedBtn = evt.target;
   const radioBtn = selectedBtn;
   const wholeKit = randomCharacter[currentQuestionIndex];
-  console.log(wholeKit);
   if(radioBtn.tagName === 'INPUT'){
-    console.log(radioBtn);
     usersRadioBtns.push(radioBtn);
   }
 
@@ -193,7 +189,24 @@ function resetButton() {
 /**
  * clears all
  */
-
+//NOTE: Global Variable
+const gameContainer = document.getElementById
 function homeBtnClear() {
-  alert('You clicked the home button');
+  alert('Are you sure you want to leave the game?  You will lose your progress.');
+  document.getElementById('player-name').value = "";
+  document.getElementById('player-name').focus();
+  const radioBtns = document.querySelectorAll('input[name="character"]');
+  for(let btn of radioBtns) {
+    if (btn.checked === true) {
+      btn.checked = false;
+    }  
+  }
+
+  document.getElementById('game-container').classList.add('hide');
+  document.getElementById('entry-controls-container').classList.remove('hide');
+  usersRadioBtns = [];
+  imagesOfusersQuestions = [];
+  console.log(usersRadioBtns);
+  console.log(imagesOfusersQuestions);
+
 }
