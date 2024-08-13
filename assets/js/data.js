@@ -22,6 +22,16 @@ const levelOne = [
             ]
     },
     {
+        pic: `<img src="assets/images/Neo.jpg">`,
+        answers: [
+            {options: `<li><label for="trinity"> Trinity <input type="radio" id="trinity" name="character" value="Trinity"></label></li>`}, 
+             {options: `<li><label for="neo"> Oracle <input class="correct" type="radio" id="neo" name="character" value="Neo"></label></li>`},  
+             {options: `<li><label for="morpheus"> Morpheus <input type="radio" id="morpheus" name="character" value=" Morpheus"></label></li>`} , 
+             {options: `<li><label for="tank"> Dozer <input type="radio" id="tank" name="character" value="Tank"></label></li>`},
+             {options: `<li><label for="agent-smith"> Agent Smith <input type="radio" id="agent-smith" name="character" value="Agent Smith"></label></li>`},
+            ]
+    },
+    {
         pic: `<img src="assets/images/Trinity.webp">`,
         answers: [
             {options: `<li><label for="dozer"> Dozer <input type="radio" id="dozer" name="character" value="Dozer"></label></li>`},
@@ -30,7 +40,18 @@ const levelOne = [
              {options: `<li><label for="trinity"> Trinity <input  class="correct" type="radio" id="trinity" name="character" value="Trinity"></label></li>`}, 
              {options: `<li><label for="mouse"> Mouse <input type="radio" id="mouse" name="character" value="Mouse"></label></li>`},
             ]
-    }
+    },
+
+    {
+        pic: `<img src="assets/images/The_Oracle.webp">`,
+        answers: [
+            {options: `<li><label for="trinity"> Trinity <input type="radio" id="trinity" name="character" value="Trinity"></label></li>`}, 
+             {options: `<li><label for="oracle"> Oracle <input class="correct" type="radio" id="oracle" name="character" value="Oracle"></label></li>`},  
+             {options: `<li><label for="morpheus"> Morpheus <input type="radio" id="morpheus" name="character" value=" Morpheus"></label></li>`} , 
+             {options: `<li><label for="dozer"> Dozer <input type="radio" id="dozer" name="character" value="Dozer"></label></li>`},
+             {options: `<li><label for="agent-brown"> Agent Brown <input type="radio" id="agent-brown" name="character" value="Agent Brown"></label></li>`},
+            ]
+    },
 ];
 
 
