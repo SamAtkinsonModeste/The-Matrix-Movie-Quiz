@@ -34,7 +34,8 @@ img {
 #overlay-how-to-play,
 #overlay-leader-board,
 #game-container,
-#user-score {
+#user-score,
+#overlayPlayAgian {
     width: 99%;
     margin: 50% auto;
     background: #e4d105;
