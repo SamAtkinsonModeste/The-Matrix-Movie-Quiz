@@ -24,11 +24,11 @@ const levelOne = [
     {
         pic: `<img src="assets/images/Trinity.webp">`,
         answers: [
-            {options: `<li><label for="dozer"> Dozer <input type="radio" id="dozer" name="character" value="Tank"></label></li>`},
+            {options: `<li><label for="dozer"> Dozer <input type="radio" id="dozer" name="character" value="Dozer"></label></li>`},
              {options: `<li><label for="oracle"> Oracle <input type="radio" id="oracle" name="character" value="Oracle"></label></li>`},  
              {options: `<li><label for="white-rabbit"> White Rabbit <input type="radio" id="white-rabbit" name="character" value="White-Rabbit"></label></li>`} , 
              {options: `<li><label for="trinity"> Trinity <input  class="correct" type="radio" id="trinity" name="character" value="Trinity"></label></li>`}, 
-             {options: `<li><label for="mouse"> Mouse <input type="radio" id="mouse" name="character" value="Mouse"></label></li>`}
+             {options: `<li><label for="mouse"> Mouse <input type="radio" id="mouse" name="character" value="Mouse"></label></li>`},
             ]
     }
 ];
