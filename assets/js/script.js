@@ -1,5 +1,6 @@
 let randomCharacter,currentQuestionIndex; 
 let currentScore = 0;
+let lvOneFinalScore = 0;
 const homeBtn = document.getElementById('homeBtn');
 const nextBtn = document.getElementById('nextBtn');
 const submitBtn = document.getElementById('submitBtn');
@@ -7,6 +8,7 @@ const optionsContainer = document.getElementById('answer-options');
 const usersScore = document.getElementById('users-score');
 const overlayHowToPlay = document.getElementById('overlay-how-to-play');
 const overlayLeaderBoard = document.getElementById('overlay-leader-board');
+const userScoreClose = document.getElementById('close-users-score');
 
 
 // let Alert = new customAlert();
@@ -38,6 +40,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
     });
 
     homeBtn.addEventListener('click', homeBtnClear);
+
+    submitBtn.addEventListener('click', usersResults );
+
+    userScoreClose.addEventListener('click', closeScoreResults);
 });
 
 
@@ -152,22 +158,39 @@ function displayCharacterOptions(option) {
  * catch Answers
  */
 //NOTE: Global Array
-let usersRadioBtns = [];
-let imagesOfusersQuestions = [];
+let usersRadioBtnsCorrect = [];
+let imagesOfusersQuestionsCorrect = [];
+let usersRadioBtnsWrong = [];
+let imagesOfusersQuestionsWrong = [];
+
 
 
 
 function catchAnswers(evt){
   const selectedBtn = evt.target;
-  const radioBtn = selectedBtn;
+  let radioBtn = selectedBtn;
   const wholeKit = randomCharacter[currentQuestionIndex];
   if(radioBtn.tagName === 'INPUT'){
-    usersRadioBtns.push(radioBtn);
+    let input = radioBtn;
+    if(input.classList.contains('correct')) {
+      usersRadioBtnsCorrect.push(input);
+      currentScore += 10;
+      let correctImage = wholeKit.pic;
+      imagesOfusersQuestionsCorrect.push(correctImage);
+      console.log(imagesOfusersQuestionsCorrect);
+      console.log(usersRadioBtnsCorrect);
+    } else {
+      let wrongImage = wholeKit.pic;
+      usersRadioBtnsWrong.push(input);
+      imagesOfusersQuestionsWrong.push(wrongImage);
+      console.log(usersRadioBtnsWrong);
+      console.log(imagesOfusersQuestionsWrong);
+    }
+    lvOneFinalScore = currentScore;
+   console.log(currentScore);
+   console.log(lvOneFinalScore);
+    
   }
-
-  imagesOfusersQuestions.push(wholeKit.pic);
-  console.log(usersRadioBtns);
-  console.log(imagesOfusersQuestions);
    
   if(randomCharacter.length > currentQuestionIndex + 1) {
     nextBtn.classList.remove('hide');
@@ -204,9 +227,54 @@ function homeBtnClear() {
 
   document.getElementById('game-container').classList.add('hide');
   document.getElementById('entry-controls-container').classList.remove('hide');
-  usersRadioBtns = [];
-  imagesOfusersQuestions = [];
-  console.log(usersRadioBtns);
-  console.log(imagesOfusersQuestions);
+  usersRadioBtnsCorrect = [];
+  imagesOfusersQuestionsCorrect = [];
+  usersRadioBtnsWrong = [];
+  imagesOfusersQuestionsWrong = [];
+  console.log(usersRadioBtnsCorrect);
+  console.log(imagesOfusersQuestionsCorrect);
+  console.log(usersRadioBtnsWrong);
+  console.log(imagesOfusersQuestionsWrong);
 
+}
+
+
+/**
+ * display users results
+ */
+
+function usersResults() {
+usersScore.classList.remove('hide');
+  document.getElementById('score').innerHTML = lvOneFinalScore;
+  
+  if (imagesOfusersQuestionsCorrect.length !== 0){
+    let liHTML= ``;
+     for(let i of imagesOfusersQuestionsCorrect){
+      
+        liHTML +=`<li width="200">${i}</li>`;
+     }
+
+     document.getElementById('charactersKnown').classList.remove('hide');
+     document.getElementById('knownUl').innerHTML = liHTML;
+  }
+
+  if (imagesOfusersQuestionsWrong.length !== 0){
+    let liHTML= ``;
+     for(let i of imagesOfusersQuestionsWrong){
+         
+        liHTML +=`<li>${i}</li>`;
+     }
+
+     document.getElementById('charactersUnknown').classList.remove('hide');
+     document.getElementById('unknownUl').innerHTML = liHTML;
+  }
+
+}
+
+/**
+ * closes the users score results
+ */
+
+function  closeScoreResults() {
+  usersScore.classList.add('hide');
 }
