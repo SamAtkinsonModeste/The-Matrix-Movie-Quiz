@@ -22,10 +22,10 @@ const levelOne = [
             ]
     },
     {
-        pic: `<img src="assets/images/Neo.jpg">`,
+        pic: `<img src="assets/images/neo.webp">`,
         answers: [
             {options: `<li><label for="trinity"> Trinity <input type="radio" id="trinity" name="character" value="Trinity"></label></li>`}, 
-             {options: `<li><label for="neo"> Oracle <input class="correct" type="radio" id="neo" name="character" value="Neo"></label></li>`},  
+             {options: `<li><label for="neo"> Neo <input class="correct" type="radio" id="neo" name="character" value="Neo"></label></li>`},  
              {options: `<li><label for="morpheus"> Morpheus <input type="radio" id="morpheus" name="character" value=" Morpheus"></label></li>`} , 
              {options: `<li><label for="tank"> Dozer <input type="radio" id="tank" name="character" value="Tank"></label></li>`},
              {options: `<li><label for="agent-smith"> Agent Smith <input type="radio" id="agent-smith" name="character" value="Agent Smith"></label></li>`},
