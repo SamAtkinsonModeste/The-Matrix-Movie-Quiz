@@ -239,6 +239,8 @@ function homeBtnClear() {
 }
 
 
+
+
 /**
  * display users results
  */
@@ -272,9 +274,61 @@ usersScore.classList.remove('hide');
 }
 
 /**
+ * reset game
+ */
+function resetGame() {
+  document.getElementById('player-name').value = "";
+  document.getElementById('player-name').focus();
+  const radioBtns = document.querySelectorAll('input[name="character"]');
+  for(let btn of radioBtns) {
+    if (btn.checked === true) {
+      btn.checked = false;
+    }  
+  }
+
+  document.getElementById('game-container').classList.add('hide');
+  document.getElementById('entry-controls-container').classList.remove('hide');
+  usersRadioBtnsCorrect = [];
+  imagesOfusersQuestionsCorrect = [];
+  usersRadioBtnsWrong = [];
+  imagesOfusersQuestionsWrong = [];
+  console.log(usersRadioBtnsCorrect);
+  console.log(imagesOfusersQuestionsCorrect);
+  console.log(usersRadioBtnsWrong);
+  console.log(imagesOfusersQuestionsWrong);
+}
+
+
+
+
+/**
  * closes the users score results
  */
 
 function  closeScoreResults() {
   usersScore.classList.add('hide');
+  document.getElementById('overlayPlayAgian').classList.remove('hide');
+  document.getElementById('game-container').classList.add('hide');
+  
+  console.log(lvOneFinalScore);
+  if(lvOneFinalScore > 10) {
+  console.log(lvOneFinalScore);
+    document.getElementById('play-lv-one-again').classList.add('hide');
+  } else {
+    document.getElementById('play-next-level').classList.add('hide');
+    resetGame();
+  }
+}
+
+
+
+
+/**
+ * options to play again
+ * 
+ */
+function playAgainOption() {
+  
+  
+
 }
