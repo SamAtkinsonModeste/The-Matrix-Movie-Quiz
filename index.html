@@ -38,126 +38,130 @@
             <div id="alertClose" aria-hidden="true"></div>
         </div>
     </div>
-    <!-- Overlay Home Intro -->
-    <div id="overlay-home" class="overlay-home" aria-labelledby="welcome-matrix-quiz welcome-text">
-        <h1 id="welcome-matrix-quiz">Welcome to Quiz</h1>
-        <div id="movie-poster">
-            <img src="assets/images/matrix-home.webp" alt="males and a female characters from the Matrix movie">
+    <main>
+        <!-- Overlay Home Intro -->
+        <div id="overlay-home" class="overlay-home" aria-labelledby="welcome-matrix-quiz welcome-text">
+            <h1 id="welcome-matrix-quiz">Welcome to Quiz</h1>
+            <div id="movie-poster">
+                <img src="assets/images/matrix-home.webp" alt="males and a female characters from the Matrix movie">
+            </div>
+
+            <p id="welcome-text">Dive into the world of Neo, Trinity, and Morpheus.
+                Whether you are a die-hard fan or a curious newcomer,
+                this quiz will test your knowledge of
+                iconic scenes, memorable quotes, and characters.
+                Are you ready to take the red or blue pill and see how deep the rabbit hole goes?
+
+            </p>
+
+            <p id="begin" aria-label="Takes you to the entry to the quiz">Let's Begin!</p>
         </div>
 
-        <p id="welcome-text">Dive into the world of Neo, Trinity, and Morpheus.
-            Whether you are a die-hard fan or a curious newcomer,
-            this quiz will test your knowledge of
-            iconic scenes, memorable quotes, and characters.
-            Are you ready to take the red or blue pill and see how deep the rabbit hole goes?
 
-        </p>
-
-        <p id="begin" aria-label="Takes you to the entry to the quiz">Let's Begin!</p>
-    </div>
-
-
-    <!--Entry Info Leader Board Buttons Player Name Input-->
-    <section id="entry-controls-container" class="hide">
-        <header>
-            <h1>Welcome to the Matrix Quiz!</h1>
-            <img src="assets/images/matrix-main-characters.webp" alt="main characters of the Matrix movie">
-        </header>
-        <label for="player-name">Enter Your Name</label>
-        <input type="text" name="player-name" id="player-name" required>
-        <button id="start-game" aria-label="starts the quiz">Start Quiz</button>
-        <button id="howToPlay" aria-label="Go to learn how to play">How To Play</button>
-        <button id="leader-board" aria-label="Go to find out peoples scores">Leader Board</button>
-    </section>
-    <div id="overlay-how-to-play" class="hide">
-        <button id="close-HowTo-btn" class="close" aria-label="closes the how to play overlay">X</button>
-        <h2 id="how-to-title">How To Play</h2>
-        <ol id="how-to-play-ul">
-            <li>Enter your Name</li>
-            <li>Choose your difficulty</li>
-            <li>You need to score 50% or more to move to the next level.</li>
-            <li>The succes of your completed levels will be displayed.</li>
-        </ol>
-    </div>
-
-    <!--Leader Board-->
-    <div id="overlay-leader-board" class="hide">
-        <button id="close-leaderBoard-btn" class="close" aria-label="closes the leader boad display">X</button>
-        <!--  Table containing all information about players scores and placement-->
-        <table>
-            <caption>The Matrix Leader Board</caption>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Score</th>
-                    <th>Place</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>The Neo</td>
-                    <td>250</td>
-                    <td>No. 1</td>
-                </tr>
-            </tbody>
-
-        </table>
-    </div>
-
-    <!--Display to give a player the option to play again or go home-->
-    <div id="overlayPlayAgian" class="hide">
-        <div id="play-agin">
-            <h2 id="play-again">Play again or Home Page?</h2>
-            <button id="start-again" aria-label="replay the quiz">Replay</button>
-            <button id="landHomeBtn" aria-label="Go back to the home page">Home</button>
+        <!--Entry Info Leader Board Buttons Player Name Input-->
+        <section id="entry-controls-container" class="hide">
+            <header>
+                <h1>Welcome to the Matrix Quiz!</h1>
+                <img src="assets/images/matrix-main-characters.webp" alt="main characters of the Matrix movie">
+            </header>
+            <label for="player-name">Enter Your Name</label>
+            <input type="text" name="player-name" id="player-name" required>
+            <button id="start-game" aria-label="starts the quiz">Start Quiz</button>
+            <button id="howToPlay" aria-label="Go to learn how to play">How To Play</button>
+            <button id="leader-board" aria-label="Go to find out peoples scores">Leader Board</button>
+        </section>
+        <div id="overlay-how-to-play" class="hide">
+            <button id="close-HowTo-btn" class="close" aria-label="closes the how to play overlay">X</button>
+            <h2 id="how-to-title">How To Play</h2>
+            <ol id="how-to-play-ul">
+                <li>Enter your Name</li>
+                <li>Choose your difficulty</li>
+                <li>You need to score 50% or more to move to the next level.</li>
+                <li>The succes of your completed levels will be displayed.</li>
+            </ol>
         </div>
-    </div>
-    <!--Quiz Container -->
-    <section id="game-container" class="hide">
-        <h1>The Matrix Quiz</h1>
-        <header id="questions-numbers">
-            <h2 id="questions"><span id="numOn">1</span>/ <span id="totalNum">25</span>
-            </h2>
-            <p id="question">What is the name of this character?</p>
-        </header>
 
-        <!--     Quiz Images, Answers inserted with javascript & button controls -->
-        <div id="answers">
-            <!-- Images of characters inserted here with javascrit-->
-            <div id="character-image">
+        <!--Leader Board-->
+        <div id="overlay-leader-board" class="hide">
+            <button id="close-leaderBoard-btn" class="close" aria-label="closes the leader boad display">X</button>
+            <!--  Table containing all information about players scores and placement-->
+            <table>
+                <caption>The Matrix Leader Board</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Place</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Neo</td>
+                        <td>250</td>
+                        <td>No. 1</td>
+                    </tr>
+                </tbody>
 
-            </div>
-            <!-- Radio buttons with character's names inserted with javascript-->
-            <div id="answer-options">
+            </table>
+        </div>
 
-            </div>
-            <!--  Buttons to go home or next question-->
-            <div id="home-next-buttons">
-                <button id="homeBtn" aria-label="Go to the home page">Home</button>
-                <button id="nextBtn" class="hide" aria-label="Go to next question">Next</button>
-                <button id="submitBtn" class="hide" aria-label="Submit all your answers">Submit Your Answers</button>
+        <!--Display to give a player the option to play again or go home-->
+        <div id="overlayPlayAgian" class="hide">
+            <div id="play-agin">
+                <h2 id="play-again">Play again or Home?</h2>
+                <button id="start-again" aria-label="replay the quiz">Replay</button>
+                <button id="landHomeBtn" aria-label="Go back to the home page">Home</button>
             </div>
         </div>
-        <!-- Display of players results -->
-        <div id="users-score" class="hide">
-            <button id="close-users-score" aria-label="Closes your score results">X</button>
-            <p id="congratsText">Well done!<br> Your score is:<span id="score-user">100</span><br>Keep going to see how
-                many more characters that you know from 'The Matrix'.</p>
-            <p id="high-score" class="hide">Wow, congratulations, you truly know your Matrix characters!<br>
-                You clearly took the <span class="red-pill-2">Red Pill</span>!.</p>
-            <!-- Displays the correct characters-->
-            <div id="charactersKnown" class="hide">
-                <h2>Characters you know!</h2>
-                <ul id="knownUl"></ul>
-            </div>
-            <!-- Displays the characters not guessed correctly-->
-            <div id="charactersUnknown" class="hide">
-                <h2>Characters you didn't know!</h2>
-                <ul id="unknownUl"></ul>
-            </div>
+        <!--Quiz Container -->
+        <section id="game-container" class="hide">
+            <h1>The Matrix Quiz</h1>
+            <header id="questions-numbers">
+                <h2 id="questions"><span id="numOn">1</span>/ <span id="totalNum">25</span>
+                </h2>
+                <p id="question">What is the name of this character?</p>
+            </header>
 
-        </div>
-    </section>
+            <!--     Quiz Images, Answers inserted with javascript & button controls -->
+            <div id="answers">
+                <!-- Images of characters inserted here with javascrit-->
+                <div id="character-image">
+
+                </div>
+                <!-- Radio buttons with character's names inserted with javascript-->
+                <div id="answer-options">
+
+                </div>
+                <!--  Buttons to go home or next question-->
+                <div id="home-next-buttons">
+                    <button id="homeBtn" aria-label="Go to the home page">Home</button>
+                    <button id="nextBtn" class="hide" aria-label="Go to next question">Next</button>
+                    <button id="submitBtn" class="hide" aria-label="Submit all your answers">Submit Your
+                        Answers</button>
+                </div>
+            </div>
+            <!-- Display of players results -->
+            <div id="users-score" class="hide">
+                <button id="close-users-score" aria-label="Closes your score results">X</button>
+                <p id="congratsText">Well done!<br> Your score is:<span id="score-user">100</span><br>Keep going to see
+                    how
+                    many more characters that you know from 'The Matrix'.</p>
+                <p id="high-score" class="hide">Wow, congratulations, you truly know your Matrix characters!<br>
+                    You clearly took the <span class="red-pill-2">Red Pill</span>!.</p>
+                <!-- Displays the correct characters-->
+                <div id="charactersKnown" class="hide">
+                    <h2>Characters you know!</h2>
+                    <ul id="knownUl"></ul>
+                </div>
+                <!-- Displays the characters not guessed correctly-->
+                <div id="charactersUnknown" class="hide">
+                    <h2>Characters you didn't know!</h2>
+                    <ul id="unknownUl"></ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
     <script src="assets/js/data.js"></script>
     <!-- <script src="scriptOld.js"></script> -->
