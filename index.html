@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--STYLESHEETS-->
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
     <!--FAVICON-->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
@@ -25,6 +22,12 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!--FONT FIRA CODE-->
+    <link rel="stylesheet" href="https://use.typekit.net/crx5sde.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <!--TITLE-->
     <title>The Matrix Quiz</title>
 </head>
@@ -43,7 +46,7 @@
         <div id="overlay-home" class="overlay-home" aria-labelledby="welcome-matrix-quiz welcome-text">
             <h1 id="welcome-matrix-quiz">Welcome to Quiz</h1>
             <div id="movie-poster">
-                <img src="assets/images/matrix-home.webp" alt="males and a female characters from the Matrix movie">
+                <img src="assets/images/home-matrix.webp" alt="males and a female characters from the Matrix movie">
             </div>
 
             <p id="welcome-text">Dive into the world of Neo, Trinity, and Morpheus.
@@ -54,7 +57,7 @@
 
             </p>
 
-            <p id="begin" aria-label="Takes you to the entry to the quiz">Let's Begin!</p>
+            <button id="begin" aria-label="Takes you to the entry to the quiz">Let's Begin!</button>
         </div>
 
 
@@ -70,6 +73,8 @@
             <button id="howToPlay" aria-label="Go to learn how to play">How To Play</button>
             <button id="leader-board" aria-label="Go to find out peoples scores">Leader Board</button>
         </section>
+
+        <!--HOW TO PLAY -->
         <div id="overlay-how-to-play" class="hide">
             <button id="close-HowTo-btn" class="close" aria-label="closes the how to play overlay">X</button>
             <h2 id="how-to-title">How To Play</h2>
@@ -164,7 +169,6 @@
     </main>
 
     <script src="assets/js/data.js"></script>
-    <!-- <script src="scriptOld.js"></script> -->
     <script src="assets/js/script.js"></script>
 </body>
 
