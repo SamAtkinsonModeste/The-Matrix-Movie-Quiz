@@ -2,24 +2,15 @@
     box-sizing: border-box;
 }
 
+/*Colour Variables*/
 :root {
     --white: #FDFCF7;
-    --black: #0A0E19;
-    --accent: #4BE9FB;
-    --mid-blue: #3FA1BF;
+    --black: rgb(10, 14, 25);
+    --accent: rgb(75, 233, 251);
+    --mid-blue: rgb(63, 161, 191);
 }
 
 
-body {
-    font: 1em/1.5 fira-code, sans-serif;
-    background: url(../images/bg-matrix.webp), no-repeat;
-    background-size: cover;
-}
-
-
-img {
-    width: 100%;
-}
 
 /*Link to matrix imported font*/
 @font-face {
@@ -33,17 +24,129 @@ img {
 
 }
 
+/********************************
+GENERAL STYLING
+*********************************/
+body {
+    font: 1em/1.5 fira-code, sans-serif;
+    background: url(../images/bg-matrix.webp), no-repeat;
+    background-size: cover;
+    color: var(--white);
+}
+
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-family: "matrix", cursive, sans-serif;
+}
+
+button {
+    display: block;
+    font-weight: bold;
+    padding: 0.600rem 0.750rem 0.450rem;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+
+main {
+    width: 99%;
+    height: 98%;
+
+}
+
+.align-center {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.posRel {
+    position: relative;
+}
+
+.posAbso {
+    position: absolute;
+}
+
+/*****HOME LANDING OVERLAY********/
 
 #overlay-home {
     height: 100vh;
     width: 100vw;
-    position: relative;
     top: 0;
-    color: white;
-    z-index: 2;
     padding-top: 1px;
+    /**DEBUGGIN***/
+    border: #e4d105 1px solid;
 }
 
+#welcome-matrix-quiz {
+    background: rgba(10, 14, 25, 0.8);
+    margin-top: 0.500rem;
+    margin-bottom: 1.2rem;
+}
+
+#movie-poster {
+    top: -26px;
+}
+
+#home-underline {
+    height: 6px;
+    width: 95%;
+    bottom: 3px;
+    left: 7px;
+    background: linear-gradient(var(--black) 35%, var(--accent));
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+}
+
+#welcome-text {
+    font-size: 0.8rem;
+    background: linear-gradient(154deg, rgba(75, 233, 251, 0.6) -30%, rgba(10, 14, 25, 0.9) 24%, rgba(10, 14, 25, 0.9) 80%, rgba(75, 233, 251, 0.6));
+    width: 96%;
+    margin-top: -14px;
+    padding: 0.550rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    text-shadow: 0 1px 2px var(--accent);
+    letter-spacing: 2px;
+    line-height: 1.3rem;
+}
+
+.red-pill {
+    color: #dc143c;
+    text-shadow: 0 1px 2px var(--white);
+    font-size: 2em;
+}
+
+.blue-pill {
+    color: #0000ff;
+    text-shadow: 0 1px 2px var(--white);
+    font-size: 2em;
+}
+
+.btn-home {
+    margin-top: 8px;
+    color: var(--white);
+    background: var(--black);
+    border: 0.020rem solid var(--white);
+    text-shadow: 0 1px 1px var(--accent);
+    letter-spacing: 3px;
+}
 
 #overlay-how-to-play,
 #overlay-leader-board,
