@@ -77,6 +77,10 @@ main {
     position: absolute;
 }
 
+.width-mobile {
+    width: 99%;
+}
+
 /*****HOME LANDING OVERLAY********/
 
 #overlay-home {
@@ -115,7 +119,9 @@ main {
 }
 
 #welcome-text,
-#controls {
+#controls,
+#overlay-how-to-play,
+#overlay-leader-board {
     font-size: 0.8rem;
     background: linear-gradient(154deg, rgba(75, 233, 251, 0.6) -30%, rgba(10, 14, 25, 0.9) 24%, rgba(10, 14, 25, 0.9) 80%, rgba(75, 233, 251, 0.6));
     width: 96%;
@@ -155,11 +161,8 @@ main {
 /*********Entry Overlay****************/
 
 #controls {
-    width: 99%;
     display: flex;
     flex-direction: column;
-
-
 }
 
 input[type="text"] {
@@ -199,17 +202,48 @@ label[for="player-name"] {
 
 }
 
-#overlay-how-to-play,
+/*********HOW TO PLAY OVERLAY****************/
+
+/* #overlay-how-to-play,
 #overlay-leader-board,
 #game-container,
 #user-score,
-#overlayPlayAgian {
-    width: 99%;
-    margin: 50% auto;
-    background: #e4d105;
-    color: #000;
+#overlayPlayAgian {} */
+
+#overlay-how-to-play,
+#overlay-leader-board {
+    top: 40%;
+    left: 6px;
+}
+
+#overlay-how-to-play {
+    border: solid var(--white) 0.005rem;
+    box-shadow: inset 0 0 8px 2px var(--white);
+    background: linear-gradient(154deg, rgba(51, 152, 163, 087) -30%, rgba(6, 9, 16, 0.9) 24%, rgba(6, 9, 16, 0.9) 80%, rgba(51, 152, 163, 0.8));
 
 }
+
+#how-to-title {
+    margin: 0.400rem 0;
+}
+
+/****Buttons that close overlays******/
+.close {
+    background: var(--white);
+    box-shadow: inset 0 0 8px 4px var(--black);
+    width: 35px;
+    height: 35px;
+    border: solid var(--accent) 0.005rem;
+    padding: 10px;
+    font-size: 1.3em;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
 
 #game-container {
     position: absolute;
