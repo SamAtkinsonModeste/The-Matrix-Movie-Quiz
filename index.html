@@ -69,15 +69,22 @@
         <!--Entry Info Leader Board Buttons Player Name Input-->
         <section id="entry-controls-container" class="hide">
             <header>
-                <h1 class="align-center">Welcome to the Matrix Quiz!</h1>
-                <img src="assets/images/matrix-main-characters.webp" alt="main characters of the Matrix movie">
+                <h1 id="quiz" class="align-center">Quiz!</h1>
+                <div class="posRel" id="movie-poster">
+                    <img src="assets/images/home-matrix.webp" alt="males and a female characters from the Matrix movie">
+                    <hr class="center posAbso" id="home-underline">
+                </div>
             </header>
-            <label for="player-name">Enter Your Name</label>
-            <input type="text" name="player-name" id="player-name" required>
-            <button class="btn" class="btn btn-entry" id="start-game" aria-label="starts the quiz">Start Quiz</button>
-            <button class="btn btn-entry" id="howToPlay" aria-label="Go to learn how to play">How To Play</button>
-            <button class="btn btn-entry" id="leader-board" aria-label="Go to find out peoples scores">Leader
-                Board</button>
+            <div class="center" id="controls">
+                <label class="align-center player-name" for="player-name">Enter Your Name </label>
+                <input class="center align-center" type="text" name="player-name" id="player-name" required>
+
+                <button class="btn btn-entry" class="btn btn-entry" id="start-game" aria-label="starts the quiz">Start
+                    Quiz</button>
+                <button class="btn btn-entry" id="howToPlay" aria-label="Go to learn how to play">How To Play</button>
+                <button class="btn btn-entry" id="leader-board" aria-label="Go to find out peoples scores">Leader
+                    Board</button>
+            </div>
         </section>
 
         <!--HOW TO PLAY -->
