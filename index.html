@@ -124,15 +124,6 @@
 
             </table>
         </div>
-
-        <!--Display to give a player the option to play again or go home-->
-        <div id="overlayPlayAgian" class="hide posAbso width-mobile">
-            <div id="play-agin">
-                <h2 class="align-center" id="play-again">Play again or Home?</h2>
-                <button class="btn" id="start-again" aria-label="replay the quiz">Replay</button>
-                <button class="btn" id="landHomeBtn" aria-label="Go back to the home page">Home</button>
-            </div>
-        </div>
         <!--Quiz Container -->
         <section id="game-container" class="hide width-mobile posAbso">
             <h1 class="align-center">The Matrix Quiz</h1>
@@ -165,15 +156,16 @@
                 </div>
             </div>
             <!-- Display of players results -->
-            <div id="users-score" class="hide width-mobile">
+            <div id="users-score" class="hide width-mobile posAbso">
                 <button class="btn close" id="close-users-score" aria-label="Closes your score results">X</button>
                 <p class="align-center" id="congratsText">Well done!<br> Your score is:<span
                         id="score-user">100</span><br>Keep going to see
                     how
-                    many more characters that you know from 'The Matrix'.</p>
-                <p class="align-center" id="high-score" class="hide">Wow, congratulations, you truly know your Matrix
+                    many more characters you know from 'The Matrix'.</p>
+                <p class="align-center hide" id="high-score">Wow, congratulations,<br> Your score is:<span
+                        id="high-score-user">100</span> Amazing, you truly know your Matrix
                     characters!<br>
-                    You clearly took the <span class="red-pill-2">Red Pill</span>!.</p>
+                    You clearly took the <span class="red-pill-two">Red Pill!</span></p>
                 <!-- Displays the correct characters-->
                 <div id="charactersKnown" class="hide">
                     <h2 class="align-center">Characters you know!</h2>
@@ -185,6 +177,15 @@
                     <ul id="unknownUl"></ul>
                 </div>
 
+            </div>
+
+            <!--Display to give a player the option to play again or go home-->
+            <div id="overlayPlayAgain" class="hide posAbso width-mobile">
+                <div id="play-agin">
+                    <h2 class="align-center" id="play-again">Play again or Go Home?</h2>
+                    <button class="btn" id="start-again" aria-label="replay the quiz">Replay</button>
+                    <button class="btn" id="landHomeBtn" aria-label="Go back to the home page">Home</button>
+                </div>
             </div>
         </section>
     </main>
