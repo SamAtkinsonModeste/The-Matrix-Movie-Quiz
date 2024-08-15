@@ -39,7 +39,9 @@ img {
     width: 100%;
 }
 
-h1 {
+h1,
+#matrix-quiz,
+#quiz {
     font-family: "matrix", cursive, sans-serif;
 }
 
@@ -61,8 +63,10 @@ main {
 
 }
 
-ul {
+ul,
+ol {
     list-style-type: none;
+    padding: 0;
 }
 
 .align-center {
@@ -102,7 +106,7 @@ ul {
 }
 
 
-#movie-poster {
+.movie-poster {
     top: -26px;
 }
 
@@ -212,12 +216,13 @@ label[for="player-name"] {
 #overlay-leader-board,
 #users-score,
 #overlayPlayAgain {
-    top: 40%;
+    top: 200px;
     left: 6px;
 }
 
 #overlay-how-to-play,
-#users-score {
+#users-score,
+#overlayPlayAgain {
     border: solid var(--white) 0.005rem;
     box-shadow: inset 0 0 8px 2px var(--white);
     background: linear-gradient(154deg, rgba(51, 152, 163, 087) -30%, rgba(6, 9, 16, 0.9) 24%, rgba(6, 9, 16, 0.9) 80%, rgba(51, 152, 163, 0.8));
@@ -229,8 +234,7 @@ label[for="player-name"] {
 }
 
 /********Leader Board*****************/
-#overlay-leader-board,
-#users-score {
+#overlay-leader-board {
     border: solid 0.050rem var(--white);
     box-shadow: inset 0 0 8px 2px var(--accent);
 
@@ -341,7 +345,7 @@ caption {
 #answer-options ul {
     display: flex;
     flex-direction: column;
-    padding: 0;
+
 
 }
 
@@ -355,7 +359,8 @@ input[type="radio"] {
 
 }
 
-input[type="radio"]+label {
+input[type="radio"]+label,
+#play-agin .btn {
     width: 90%;
     display: block;
     margin: 0 auto;
@@ -415,11 +420,70 @@ input[type="radio"]:checked+label {
     margin-top: 10px;
 }
 
-#knownUl li,
-#unknownUl li {
-    width: 150px;
+#characters-known-low,
+#characters-known-high,
+#characters-unknown-low,
+#characters-unknown-high {
+    font-size: 1.2rem;
 }
 
+#knownUlLow,
+#knownUlHigh,
+#unknownUlLow,
+#unknownUlHigh {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#knownUlLow li,
+#knownUlHigh li,
+#unknownUlLow li,
+#unknownUlHigh li {
+    width: 128px;
+    margin: 5px;
+
+}
+
+#knownUlLow li:nth-child(odd):last-child:not(:only-child),
+#knownUlHigh li:nth-child(odd):last-child:not(:only-child),
+#unknownUlLow li:nth-child(odd):last-child:not(:only-child),
+#unknownUlHigh li:nth-child(odd):last-child:not(:only-child) {
+    width: 100%;
+    padding-left: 25%;
+
+}
+
+#knownUlLow li:nth-child(odd):last-child:not(:only-child) img,
+#knownUlHigh li:nth-child(odd):last-child:not(:only-child) img,
+#unknownUlLow li:nth-child(odd):last-child:not(:only-child) img,
+#unknownUlHigh li:nth-child(odd):last-child:not(:only-child) img {
+    width: 128px;
+}
+
+/***********PLAY Again Overlay*****************/
+#overlayPlayAgain {
+    padding-bottom: 20px;
+}
+
+#question-play-agin {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#question-play-again {
+    font-size: 1.1rem;
+    margin-top: 40px;
+}
+
+#play-again .btn {
+    width: 43%;
+    margin: 52px 5px 20px;
+    align-self: center;
+    font-size: 1.2rem;
+}
 
 .hide {
     display: none;
