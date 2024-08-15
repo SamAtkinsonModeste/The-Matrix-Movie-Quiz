@@ -216,7 +216,7 @@ label[for="player-name"] {
 #overlay-leader-board,
 #users-score,
 #overlayPlayAgain {
-    top: 200px;
+    top: 25px;
     left: 6px;
 }
 
@@ -360,7 +360,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]+label,
-#play-agin .btn {
+#play-again .btn {
     width: 90%;
     display: block;
     margin: 0 auto;
@@ -427,6 +427,11 @@ input[type="radio"]:checked+label {
     font-size: 1.2rem;
 }
 
+
+#characters-unknown-low {
+    font-size: 0.850rem;
+}
+
 #knownUlLow,
 #knownUlHigh,
 #unknownUlLow,
@@ -467,7 +472,7 @@ input[type="radio"]:checked+label {
     padding-bottom: 20px;
 }
 
-#question-play-agin {
+#play-again {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -479,7 +484,7 @@ input[type="radio"]:checked+label {
 }
 
 #play-again .btn {
-    width: 43%;
+    width: 42%;
     margin: 52px 5px 20px;
     align-self: center;
     font-size: 1.2rem;
