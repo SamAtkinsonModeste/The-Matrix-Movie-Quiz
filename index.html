@@ -47,7 +47,7 @@
             <h1 class="align-center" id="welcome-matrix-quiz">Welcome to Quiz</h1>
             <div class="posRel" id="movie-poster">
                 <img src="assets/images/home-matrix.webp" alt="males and a female characters from the Matrix movie">
-                <hr class="center posAbso" id="home-underline">
+                <hr class="center posAbso img-underline">
             </div>
 
             <p class="align-center center" id="welcome-text">Dive into the world of<br> Neo, Trinity, and Morpheus.<br>
@@ -72,7 +72,7 @@
                 <h1 id="quiz" class="align-center">Quiz!</h1>
                 <div class="posRel" id="movie-poster">
                     <img src="assets/images/home-matrix.webp" alt="males and a female characters from the Matrix movie">
-                    <hr class="center posAbso" id="home-underline">
+                    <hr class="center posAbso img-underline">
                 </div>
             </header>
             <div class="center width-mobile" id="controls">
@@ -134,18 +134,22 @@
             </div>
         </div>
         <!--Quiz Container -->
-        <section id="game-container" class="hide width-mobile">
+        <section id="game-container" class="hide width-mobile posAbso">
             <h1 class="align-center">The Matrix Quiz</h1>
             <header id="questions-numbers">
-                <h2 id="questions"><span id="numOn">1</span>/ <span id="totalNum">25</span>
+                <div class="posRel poster-questions" id="movie-poster">
+                    <img src="assets/images/matrix-main-characters.webp" alt="main characters of the Matrix film">
+                    <hr class="center posAbso img-underline" id="questions-underline">
+                </div>
+                <h2 id="questions-count"><span id="numOn">1</span>/ <span id="totalNum">25</span>
                 </h2>
                 <p id="question">What is the name of this character?</p>
             </header>
 
             <!--     Quiz Images, Answers inserted with javascript & button controls -->
-            <div id="answers">
+            <div id="answers" class="posRel">
                 <!-- Images of characters inserted here with javascrit-->
-                <div id="character-image">
+                <div id="character-image" class="posRel">
 
                 </div>
                 <!-- Radio buttons with character's names inserted with javascript-->
