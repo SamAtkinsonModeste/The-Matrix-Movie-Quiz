@@ -41,7 +41,7 @@
             <div id="alertClose" aria-hidden="true"></div>
         </div>
     </div>
-    <main class="center">
+    <main class="center posRel">
         <!-- Overlay Home Intro -->
         <div class="posRel" id="overlay-home" class="overlay-home" aria-labelledby="welcome-matrix-quiz welcome-text">
             <h1 class="align-center" id="welcome-matrix-quiz">Welcome to Quiz</h1>
@@ -75,7 +75,7 @@
                     <hr class="center posAbso" id="home-underline">
                 </div>
             </header>
-            <div class="center" id="controls">
+            <div class="center width-mobile" id="controls">
                 <label class="align-center player-name" for="player-name">Enter Your Name </label>
                 <input class="center align-center" type="text" name="player-name" id="player-name" required>
 
@@ -88,8 +88,8 @@
         </section>
 
         <!--HOW TO PLAY -->
-        <div id="overlay-how-to-play" class="hide">
-            <button class="btn" id="close-HowTo-btn" class="close"
+        <div id="overlay-how-to-play" class="hide posAbso width-mobile">
+            <button class="btn close align-center" id="close-HowTo-btn"
                 aria-label="closes the how to play overlay">X</button>
             <h2 class="align-center" id="how-to-title">How To Play</h2>
             <ol id="how-to-play-ul">
@@ -101,8 +101,8 @@
         </div>
 
         <!--Leader Board-->
-        <div id="overlay-leader-board" class="hide">
-            <button class="btn" id="close-leaderBoard-btn" class="close"
+        <div id="overlay-leader-board" class="hide posAbso width-mobile">
+            <button class="btn close align-center" id="close-leaderBoard-btn"
                 aria-label="closes the leader boad display">X</button>
             <!--  Table containing all information about players scores and placement-->
             <table>
@@ -126,7 +126,7 @@
         </div>
 
         <!--Display to give a player the option to play again or go home-->
-        <div id="overlayPlayAgian" class="hide">
+        <div id="overlayPlayAgian" class="hide posAbso width-mobile">
             <div id="play-agin">
                 <h2 class="align-center" id="play-again">Play again or Home?</h2>
                 <button class="btn" id="start-again" aria-label="replay the quiz">Replay</button>
@@ -134,7 +134,7 @@
             </div>
         </div>
         <!--Quiz Container -->
-        <section id="game-container" class="hide">
+        <section id="game-container" class="hide width-mobile">
             <h1 class="align-center">The Matrix Quiz</h1>
             <header id="questions-numbers">
                 <h2 id="questions"><span id="numOn">1</span>/ <span id="totalNum">25</span>
@@ -161,8 +161,8 @@
                 </div>
             </div>
             <!-- Display of players results -->
-            <div id="users-score" class="hide">
-                <button class="btn" id="close-users-score" aria-label="Closes your score results">X</button>
+            <div id="users-score" class="hide width-mobile">
+                <button class="btn close" id="close-users-score" aria-label="Closes your score results">X</button>
                 <p class="align-center" id="congratsText">Well done!<br> Your score is:<span
                         id="score-user">100</span><br>Keep going to see
                     how
