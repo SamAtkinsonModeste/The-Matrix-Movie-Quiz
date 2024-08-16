@@ -1,157 +1,340 @@
-const matrixCharacters = [
-    {
-        pic: `<img src="assets/images/agent-smith.webp">`,
-       answers: [
-        {options: `<li class="align-center"><input class="wrong" type="radio" id="cypher" name="character" value="Cypher"><label for="cypher"> Cypher</label></li>`},
-
-         {options: `<li class="align-center"><input class="correct" type="radio" id="agent-smith" name="character" value="Agent-smith"><label for="agent-smith"> Agent Smith</label></li>`} ,
-
-         {options: `<li class="align-center"><input class="wrong" type="radio" id="neo" name="character" value="Neo"><label for="neo">Neo</label></li>`},
-
-         {options: `<li class="align-center"><input class="wrong" type="radio" id="apoc" name="character" value="Apoc"><label for="apoc">Apoc</label></li>`},
-
-         {options: `<li class="align-center"><input class="wrong" type="radio" id="anderson" name="character" value="Mr Anderson"><label for="anderson"> Mr Anderson </label></li>`}   
-        
-        ]
-    },
-    {
-        pic:`<img src="assets/images/apoc.webp">`,
-        answers: [
-            {options: `<li class="align-center"><input class="wrong" type="radio" id="tank" name="character" value="Tank"><label for="tank"> Tank </label></li>`}, 
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="white-rabbit" name="character" value="White-Rabbit"><label for="white-rabbit"> White Rabbit </label></li>`} , 
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="mouse" name="character" value="Mouse"><label for="mouse"> Mouse </label></li>`},
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="switch" name="character" value="Switch"><label for="switch"> Switch </label></li>`}, 
-
-             {options: `<li class="align-center"><input class="correct" type="radio" id="apoc" name="character" value="Apoc"><label for="apoc"> Apoc </label></li>`},   
-        
-            ]
-    },
-    {
-        pic: `<img src="assets/images/neo.webp">`,
-        answers: [
-            {options: `<li class="align-center"><input class="wrong" type="radio" id="trinity" name="character" value="Trinity"><label for="trinity"> Trinity </label></li>`}, 
-
-             {options: `<li class="align-center"><input class="correct" type="radio" id="neo" name="character" value="Neo"><label for="neo"> Neo </label></li>`},
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="morpheus" name="character" value=" Morpheus"><label for="morpheus"> Morpheus </label></li>`} , 
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="tank" name="character" value="Tank"><label for="tank"> Dozer </label></li>`},
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="agent-smith" name="character" value="Agent Smith"><label for="agent-smith"> Agent Smith </label></li>`},
-            ]
-    },
-    {
-        pic: `<img src="assets/images/trinity.webp">`,
-        answers: [
-            {options: `<li class="align-center"><input type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`},
-
-             {options: `<li class="align-center"><input type="radio" id="oracle" name="character" value="Oracle"><label for="oracle"> Oracle </label></li>`}, 
-
-             {options: `<li class="align-center"><input type="radio" id="white-rabbit" name="character" value="White-Rabbit"><label for="white-rabbit"> White Rabbit </label></li>`} , 
-
-             {options: `<li class="align-center"> <input  class="correct" type="radio" id="trinity" name="character" value="Trinity"><label for="trinity"> Trinity</label></li>`}, 
-
-             {options: `<li class="align-center"><input type="radio" id="mouse" name="character" value="Mouse"><label for="mouse"> Mouse </label></li>`},
-            ]
-    },
-
-    {
-        pic: `<img src="assets/images/the-oracle.webp">`,
-        answers: [
-            {options: `<li class="align-center"><input class="wrong" type="radio" id="trinity" name="character" value="Trinity"><label for="trinity"> Trinity </label></li>`},
-
-             {options: `<li class="align-center"><input class="correct" type="radio" id="oracle" name="character" value="Oracle"><label for="oracle"> Oracle </label></li>`}, 
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="morpheus" name="character" value=" Morpheus"><label for="morpheus"> Morpheus </label></li>`} , 
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`},
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="agent-brown" name="character" value="Agent Brown"><label for="agent-brown"> Agent Brown </label></li>`},
-            ]
-    },
-    {
-        pic: `<img src="assets/images/morpheus.webp">`,
-        answers: [
-            {options: `<li class="align-center"><input class="wrong" type="radio" id="trinity" name="character" value="Trinity"><label for="trinity"> Trinity </label></li>`}, 
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="oracle" name="character" value="Oracle"><label for="oracle"> Oracle </label></li>`},  
-
-             {options: `<li class="align-center"><input  class="correct" type="radio" id="morpheus" name="character" value=" Morpheus"><label for="morpheus"> Morpheus </label></li>`} ,
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`},
-
-             {options: `<li class="align-center"><input class="wrong" type="radio" id="agent-brown" name="character" value="Agent Brown"><label for="agent-brown"> Agent Brown </label></li>`},
-            ]
-    },
-];
-
-
-
-
-
-
-
-const levelTwo = [
-
-   
-    {
-        pic:`<img src="assets/images/apoc.webp">`,
-        answers: [
-            {options: `<li class="align-center"><label for="tank"> Tank <input type="radio" id="tank" name="character" value="Tank"></label></li>`}, 
-             {options: `<li class="align-center"><label for="white-rabbit"> White Rabbit <input type="radio" id="white-rabbit" name="character" value="White-Rabbit"></label></li>`} , 
-             {options: `<li class="align-center"><label for="mouse"> Mouse <input type="radio" id="mouse" name="character" value="Mouse"></label></li>`},
-             {options: `<li class="align-center"><label for="switch"> Switch <input type="radio" id="switch" name="character" value="Switch"></label></li>`}, 
-             {options: `<li class="align-center"><label for="apoc"> Apoc <input class="correct" type="radio" id="apoc" name="character" value="Apoc"></label></li>`},   
-        
-            ]
-    },
-    {
-        pic: `<img src="assets/images/neo.webp">`,
-        answers: [
-            {options: `<li class="align-center"><label for="trinity"> Trinity <input type="radio" id="trinity" name="character" value="Trinity"></label></li>`}, 
-             {options: `<li class="align-center"><input class="correct" type="radio" id="neo" name="character" value="Neo"><label for="neo">Neo</label></li>`},  
-             {options: `<li class="align-center"><label for="morpheus"> Morpheus <input type="radio" id="morpheus" name="character" value=" Morpheus"></label></li>`} , 
-             {options: `<li class="align-center"><label for="tank"> Dozer <input type="radio" id="tank" name="character" value="Tank"></label></li>`},
-             {options: `<li class="align-center"><label for="agent-smith"> Agent Smith <input type="radio" id="agent-smith" name="character" value="Agent Smith"></label></li>`},
-            ]
-    },
-    {
-        pic: `<img src="assets/images/Trinity.webp">`,
-        answers: [
-            {options: `<li class="align-center"><label for="dozer"> Dozer <input type="radio" id="dozer" name="character" value="Dozer"></label></li>`},
-             {options: `<li class="align-center"><label for="oracle"> Oracle <input type="radio" id="oracle" name="character" value="Oracle"></label></li>`},  
-             {options: `<li class="align-center"><label for="white-rabbit"> White Rabbit <input type="radio" id="white-rabbit" name="character" value="White-Rabbit"></label></li>`} , 
-             {options: `<li class="align-center"><label for="trinity"> Trinity <input  class="correct" type="radio" id="trinity" name="character" value="Trinity"></label></li>`}, 
-             {options: `<li class="align-center"><label for="mouse"> Mouse <input type="radio" id="mouse" name="character" value="Mouse"></label></li>`},
-            ]
-    },
-
-
-    {
-        pic: `<img src="assets/images/agent_smith.jpg">`,
-       answers: [
-        {options: `<li class="align-center"><label for="cypher"> Cypher <input type="radio" id="cypher" name="character" value="Cypher"></label></li>`}, 
-         {options: `<li class="align-center"><label for="agent-smith"> Agent Smith <input class="correct" type="radio" id="agent-smith" name="character" value="Agent-smith"></label></li>`} , 
-         {options: `<li class="align-center"><label for="neo"> Neo <input type="radio" id="neo" name="character" value="Neo"></label></li>`},
-         {options: `<li class="align-center"><label for="apoc"> Apoc <input type="radio" id="apoc" name="character" value="Apoc"></label></li>`},
-         {options: `<li class="align-center"><label for="anderson"> Mr Anderson <input type="radio" id="anderson" name="character" value="Mr Anderson"></label></li>`}   
-        
-        ]
-    },
-
-    {
-        pic: `<img src="assets/images/The_Oracle.webp">`,
-        answers: [
-            {options: `<li class="align-center"><label for="trinity"> Trinity <input type="radio" id="trinity" name="character" value="Trinity"></label></li>`}, 
-             {options: `<li class="align-center"><label for="oracle"> Oracle <input class="correct" type="radio" id="oracle" name="character" value="Oracle"></label></li>`},  
-             {options: `<li class="align-center"><label for="morpheus"> Morpheus <input type="radio" id="morpheus" name="character" value=" Morpheus"></label></li>`} , 
-             {options: `<li class="align-center"><label for="dozer"> Dozer <input type="radio" id="dozer" name="character" value="Dozer"></label></li>`},
-             {options: `<li class="align-center"><label for="agent-brown"> Agent Brown <input type="radio" id="agent-brown" name="character" value="Agent Brown"></label></li>`},
-            ]
-    },
-];
-
-
+const matrixCharacters = [ {
+	pic: `<img src="assets/images/agent-smith.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="cypher" name="character" value="Cypher"><label for="cypher"> Cypher</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="agent-smith" name="character" value="Agent-smith"><label for="agent-smith"> Agent Smith</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="neo" name="character" value="Neo"><label for="neo">Neo</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="apoc" name="character" value="Apoc"><label for="apoc">Apoc</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="anderson" name="character" value="Mr Anderson"><label for="anderson"> Mr Anderson </label></li>`
+	} ]
+}, {
+	pic: `<img src="assets/images/apoc.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="tank" name="character" value="Tank"><label for="tank"> Tank </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="white-rabbit" name="character" value="White-Rabbit"><label for="white-rabbit"> White Rabbit </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="mouse" name="character" value="Mouse"><label for="mouse"> Mouse </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="switch" name="character" value="Switch"><label for="switch"> Switch </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="apoc" name="character" value="Apoc"><label for="apoc"> Apoc </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/neo.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="trinity" name="character" value="Trinity"><label for="trinity"> Trinity </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="neo" name="character" value="Neo"><label for="neo"> Neo </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="morpheus" name="character" value=" Morpheus"><label for="morpheus"> Morpheus </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="tank" name="character" value="Tank"><label for="tank"> Dozer </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="agent-smith" name="character" value="Agent Smith"><label for="agent-smith"> Agent Smith </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/trinity.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`
+	}, {
+		options: `<li class="align-center"><input type="radio" id="oracle" name="character" value="Oracle"><label for="oracle"> Oracle </label></li>`
+	}, {
+		options: `<li class="align-center"><input type="radio" id="white-rabbit" name="character" value="White-Rabbit"><label for="white-rabbit"> White Rabbit </label></li>`
+	}, {
+		options: `<li class="align-center"> <input  class="correct" type="radio" id="trinity" name="character" value="Trinity"><label for="trinity"> Trinity</label></li>`
+	}, {
+		options: `<li class="align-center"><input type="radio" id="mouse" name="character" value="Mouse"><label for="mouse"> Mouse </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/the-oracle.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="oracle" name="character" value="Oracle"><label for="oracle"> Oracle </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="morpheus" name="character" value=" Morpheus"><label for="morpheus"> Morpheus </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="agent-brown" name="character" value="Agent Brown"><label for="agent-brown"> Agent Brown </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/morpheus.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="merovingian" name="character" value="Merovingian"><label for="merovingian"> Merovingian </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="oracle" name="character" value="Oracle"><label for="oracle"> Oracle </label></li>`
+	}, {
+		options: `<li class="align-center"><input  class="correct" type="radio" id="morpheus" name="character" value=" Morpheus"><label for="morpheus"> Morpheus </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="jason-lock" name="character" value="Jason Lock"><label for="jason-lock"> Jason Lock </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="agent-brown" name="character" value="Agent Brown"><label for="agent-brown"> Agent Brown </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/agent-brown.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="zee" name="character" value="Zee"><label for="zee"> Zee </label></li>`
+	}, {
+		options: `<li class="align-center"><input  class="correct" type="radio" id="agent-brown" name="character" value=" Agent Brown"><label for="agent-brown"> Agent Brown </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="mifune" name="character" value="mifune"><label for="mifune"> Mifune </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="kid" name="character" value="Kid"><label for="kid"> Kid </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="agent-smith" name="character" value="Agent Smith"><label for="agent-smith"> Agent Smith </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/white-rabbit.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="zee" name="character" value="Zee"><label for="zee"> Zee </label></li>`
+	}, {
+		options: `<li class="align-center"><input  class="correct" type="radio" id="white-rabbit" name="character" value=" White Rabbit"><label for="white-rabbit"> White Rabbit </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="mifune" name="character" value="mifune"><label for="mifune"> Mifune </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="kid" name="character" value="Kid"><label for="kid"> Kid </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="link" name="character" value="Link"><label for="link"> Link </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/switch.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="cypher" name="character" value="Cypher"><label for="cypher"> Cypher </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="mifune" name="character" value="mifune"><label for="mifune"> Mifune </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="bane" name="character" value="Bane"><label for="bane"> Bane </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="link" name="character" value="Link"><label for="link"> Link </label></li>`
+	}, {
+		options: `<li class="align-center"><input  class="correct" type="radio" id="switch" name="character" value="Switch"><label for="switch"> Switch </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/tank.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="cypher" name="character" value="Cypher"><label for="cypher"> Cypher </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="mifune" name="character" value="mifune"><label for="mifune"> Mifune </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="bane" name="character" value="Bane"><label for="bane"> Bane </label></li>`
+	}, {
+		options: `<li class="align-center"><input  class="correct" type="radio" id="tank" name="character" value="Tank"><label for="tank"> Tank </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="link" name="character" value="Link"><label for="link"> Link </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/mouse.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="neo" name="character" value="Neo"><label for="neo"> Neo </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="architect" name="character" value="Architect"><label for="architect"> Architect </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="bane" name="character" value="Bane"><label for="bane"> Bane </label></li>`
+	}, {
+		options: `<li class="align-center"><input  class="correct" type="radio" id="mouse" name="character" value="Mouse"><label for="mouse"> Mouse </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="link" name="character" value="Link"><label for="link"> Link </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/dozer.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="correct" type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="neo" name="character" value="Neo"><label for="neo"> Neo </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="architect" name="character" value="Architect"><label for="architect"> Architect </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="bane" name="character" value="Bane"><label for="bane"> Bane </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="link" name="character" value="Link"><label for="link"> Link </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/bane.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="neo" name="character" value="Neo"><label for="neo"> Neo </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="architect" name="character" value="Architect"><label for="architect"> Architect </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="bane" name="character" value="Bane"><label for="bane"> Bane </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="link" name="character" value="Link"><label for="link"> Link </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/councillar-hamann.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="councillar-hamann" name="character" value="Councillar Hamann"><label for="councillar-hamann"> Councillar Hamann </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="neo" name="character" value="Neo"><label for="neo"> Neo </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="architect" name="character" value="Architect"><label for="architect"> Architect </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="link" name="character" value="Link"><label for="link"> Link </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/cypher.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="cypher" name="character" value="Cypher"><label for="cypher"> Cypher </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="neo" name="character" value="Neo"><label for="neo"> Neo </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="architect" name="character" value="Architect"><label for="architect"> Architect </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="niobe" name="character" value="Niobe"><label for="niobe"> Niobe </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/jason-lock.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="jason-lock" name="character" value="Jason Lock"><label for="jason-lock"> Jason Lock </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="neo" name="character" value="Neo"><label for="neo"> Neo </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="architect" name="character" value="Architect"><label for="architect"> Architect </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="niobe" name="character" value="Niobe"><label for="niobe"> Niobe </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/keymaker.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="keymaker" name="character" value="Keymaker"><label for="keymaker"> Keymaker </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="architect" name="character" value="Architect"><label for="architect"> Architect </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="niobe" name="character" value="Niobe"><label for="niobe"> Niobe </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/kid.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="kid" name="character" value="Kid"><label for="kid"> Kid </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="architect" name="character" value="Architect"><label for="architect"> Architect </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="niobe" name="character" value="Niobe"><label for="niobe"> Niobe </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/link.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="mifune" name="character" value="Mifune"><label for="mifune"> Mifune</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="kid" name="character" value="Kid"><label for="kid"> Kid </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="link" name="character" value="Link"><label for="link"> Link </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="niobe" name="character" value="Niobe"><label for="niobe"> Niobe </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/merovingian.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="mifune" name="character" value="Mifune"><label for="mifune"> Mifune</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="kid" name="character" value="Kid"><label for="kid"> Kid </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="merovingian" name="character" value="Merovingian"><label for="merovingian"> Merovingian </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="niobe" name="character" value="Niobe"><label for="niobe"> Niobe </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/mifune.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="correct" type="radio" id="mifune" name="character" value="Mifune"><label for="mifune"> Mifune</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="kid" name="character" value="Kid"><label for="kid"> Kid </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="merovingian" name="character" value="Merovingian"><label for="merovingian"> Merovingian </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="niobe" name="character" value="Niobe"><label for="niobe"> Niobe </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/niobe.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="mifune" name="character" value="Mifune"><label for="mifune"> Mifune</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="kid" name="character" value="Kid"><label for="kid"> Kid </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="merovingian" name="character" value="Merovingian"><label for="merovingian"> Merovingian </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="niobe" name="character" value="Niobe"><label for="niobe"> Niobe </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/seraph.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="mifune" name="character" value="Mifune"><label for="mifune"> Mifune</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="kid" name="character" value="Kid"><label for="kid"> Kid </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="merovingian" name="character" value="Merovingian"><label for="merovingian"> Merovingian </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="niobe" name="character" value="Niobe"><label for="niobe"> Niobe </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/zee.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="mifune" name="character" value="Mifune"><label for="mifune"> Mifune</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="zee" name="character" value="Zee"><label for="zee"> Zee </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="merovingian" name="character" value="Merovingian"><label for="merovingian"> Merovingian </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="niobe" name="character" value="Niobe"><label for="niobe"> Niobe </label></li>`
+	}, ]
+}, {
+	pic: `<img src="assets/images/architect.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="mifune" name="character" value="Mifune"><label for="mifune"> Mifune</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="zee" name="character" value="Zee"><label for="zee"> Zee </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="merovingian" name="character" value="Merovingian"><label for="merovingian"> Merovingian </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="correct" type="radio" id="architect" name="character" value="Architect"><label for="architect">Architect </label></li>`
+	}, ]
+},
+{
+	pic: `<img src="assets/images/mifune.webp">`,
+	answers: [ {
+		options: `<li class="align-center"><input  class="correct" type="radio" id="mifune" name="character" value="Mifune"><label for="mifune"> Mifune</label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="zee" name="character" value="Zee"><label for="zee"> Zee </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="merovingian" name="character" value="Merovingian"><label for="merovingian"> Merovingian </label></li>`
+	}, {
+		options: `<li class="align-center"><input class="wrong" type="radio" id="architect" name="character" value="Architect"><label for="architect">Architect </label></li>`
+	}, ]
+}, ];
