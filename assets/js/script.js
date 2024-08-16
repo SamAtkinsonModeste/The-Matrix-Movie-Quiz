@@ -180,7 +180,7 @@ function resetButton() {
  */
 function usersResults() {
 	if ( finalScore > 180 ) {
-		document.getElementById( 'high-score' ).classList.remove( 'hide' );
+		document.getElementById( 'high-scorer' ).classList.remove( 'hide' );
 		document.getElementById( 'users-score' ).classList.remove( 'hide' );
 		document.getElementById( 'high-score-user' ).innerHTML = finalScore;
 		if ( imagesOfusersQuestionsCorrect.length !== 0 ) {
@@ -208,7 +208,7 @@ function usersResults() {
 			let lowCorrectLiHTML = ``;
 			for ( let i of imagesOfusersQuestionsCorrect ) {
 				lowCorrectLiHTML += `<li>${i}</li>`;
-				console.log( lowCorrectLiHTML );
+				
 			}
 			document.getElementById( 'charactersKnownLow' ).classList.remove( 'hide' );
 			document.getElementById( 'knownUlLow' ).innerHTML = lowCorrectLiHTML;
@@ -217,7 +217,7 @@ function usersResults() {
 			let wrongLowLiHTML = ``;
 			for ( let i of imagesOfusersQuestionsWrong ) {
 				wrongLowLiHTML += `<li>${i}</li>`;
-				console.log( wrongLowLiHTML );
+				
 			}
 			document.getElementById( 'charactersUnknownLow' ).classList.remove( 'hide' );
 			document.getElementById( 'unknownUlLow' ).innerHTML = wrongLowLiHTML;
