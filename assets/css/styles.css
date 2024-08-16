@@ -65,6 +65,11 @@ main {
 
 ul,
 ol {
+
+    padding: 0;
+}
+
+ul {
     list-style-type: none;
     padding: 0;
 }
@@ -484,3 +489,184 @@ input[type="radio"]:checked+label {
                Media Queries
 
 ******************************************************/
+
+/*****TABLET PORTRIAT*************/
+@media (min-width: 768px) {
+
+    /****OVERLAY HOME***********/
+    #movie-poster,
+    #quiz-poster,
+    .poster-questions {
+        width: 550px;
+        margin: 0 auto;
+    }
+
+    #welcome-text {
+        font-size: 1.1rem;
+        line-height: 25px;
+    }
+
+    .btn-home {
+        font-size: 1.5rem;
+    }
+
+    /*******ENTRY CONTROLS CONTAINER***********/
+    #quiz {
+        font-size: 2rem;
+
+    }
+
+    #quiz-poster {
+        width: 640px;
+    }
+
+
+    #controls {
+        width: 450px;
+        margin: 0 auto;
+    }
+
+
+    input[type="text"],
+    .btn-entry {
+        font-size: 1.4rem;
+    }
+
+    /*********GAME CONTAINER*******************/
+
+    #game-container {
+        top: 20px;
+        left: 19px;
+        max-width: 723px;
+    }
+
+    #matrix-quiz {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    .poster-questions {
+        margin: 0;
+        margin-left: auto;
+    }
+
+    #questions-under1 {
+        width: 100%;
+        left: 1px;
+    }
+
+    #question {
+        font-size: 1.4rem;
+    }
+
+
+    #character-image {
+        height: 0;
+        margin-top: 0;
+        width: 50%;
+    }
+
+    #answer-options {
+        width: 50%;
+    }
+
+    input[type="radio"]+label {
+        font-size: 1.3rem;
+    }
+
+    #homeBtn,
+    #nextBtn {
+        font-size: 2rem;
+    }
+
+    /**********USERS SCORE**********************/
+
+    #congratsText {
+        font-size: 1.5rem;
+        line-height: 30px;
+        margin-top: -10px;
+    }
+
+    #knownUlLow,
+    #knownUlHigh,
+    #unknownUlLow,
+    #unknownUlHigh {
+        max-width: 570px;
+        margin: 0 auto;
+    }
+
+    #knownUlLow li,
+    #knownUlHigh li,
+    #unknownUlLow li,
+    #unknownUlHigh li {
+        width: 100px;
+        margin: 3px;
+    }
+
+    #knownUlLow li:nth-child(odd):last-child:not(:only-child),
+    #knownUlHigh li:nth-child(odd):last-child:not(:only-child),
+    #unknownUlLow li:nth-child(odd):last-child:not(:only-child),
+    #unknownUlHigh li:nth-child(odd):last-child:not(:only-child) {
+        width: 100px;
+        margin: 3px
+    }
+
+    #knownUlLow li:nth-child(odd):last-child:not(:only-child) img,
+    #knownUlHigh li:nth-child(odd):last-child:not(:only-child) img,
+    #unknownUlLow li:nth-child(odd):last-child:not(:only-child) img,
+    #unknownUlHigh li:nth-child(odd):last-child:not(:only-child) img {
+        width: 10px;
+    }
+
+    #characters-known-low,
+    #characters-known-high,
+    #characters-unknown-low,
+    #characters-unknown-high {
+        font-size: 1.5rem;
+    }
+
+    /**************OVEERLAYS INFO*********************/
+
+    #overlay-how-to-play,
+    #users-score,
+    #overlayPlayAgain {
+        top: 46px;
+        left: 14px;
+    }
+
+
+    #overlayPlayAgain {
+        top: 350px;
+
+    }
+
+    #question-play-again {
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+
+    #play-again .btn {
+        width: 48%;
+        font-size: 2.5rem;
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+    #game-container {
+        position: relative;
+        margin: 10px auto;
+    }
+
+    #play-again .btn {
+        max-width: 400px;
+        font-size: 2.5rem;
+        margin: 52px auto 20px;
+    }
+
+    #question-play-again {
+        font-size: 4rem;
+        margin-top: 40px;
+    }
+}
