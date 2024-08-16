@@ -33,14 +33,6 @@
 </head>
 
 <body>
-    <!--CUSTOM Alert containers-->
-    <div id="custom-alert-overlay" aria-hidden="true">
-        <div id="custom-alert-user" aria-hidden="true">
-            <div id="alertHead" aria-hidden="true"></div>
-            <div id="alertBody" aria-hidden="true"></div>
-            <div id="alertClose" aria-hidden="true"></div>
-        </div>
-    </div>
     <main class="center posRel">
         <!-- Overlay Home Intro -->
         <div class="posRel overlay-home" id="overlay-home" aria-labelledby="welcome-matrix-quiz welcome-text">
@@ -82,8 +74,6 @@
                 <button class="btn btn-entry" id="start-game" aria-label="starts the quiz">Start
                     Quiz</button>
                 <button class="btn btn-entry" id="howToPlay" aria-label="Go to learn how to play">How To Play</button>
-                <button class="btn btn-entry" id="leader-board" aria-label="Go to find out peoples scores">Leader
-                    Board</button>
             </div>
         </section>
 
@@ -98,31 +88,6 @@
                 <li>You need to score 50% or more to move to the next level.</li>
                 <li>The succes of your completed levels will be displayed.</li>
             </ol>
-        </div>
-
-        <!--Leader Board-->
-        <div id="overlay-leader-board" class="hide posAbso width-mobile">
-            <button class="btn close align-center" id="close-leaderBoard-btn"
-                aria-label="closes the leader boad display">X</button>
-            <!--  Table containing all information about players scores and placement-->
-            <table class="center width-mobile">
-                <caption>The Matrix Leader Board</caption>
-                <thead>
-                    <tr class="align-center">
-                        <th>Name</th>
-                        <th>Score</th>
-                        <th>Place</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="align-center">
-                        <td>The Neo</td>
-                        <td>250</td>
-                        <td>No. 1</td>
-                    </tr>
-                </tbody>
-
-            </table>
         </div>
 
         <!-- Display of players results -->
@@ -149,7 +114,7 @@
             </div>
 
             <!-- HIGH SCORE CONGRATS MESSAGE -->
-            <div id="high-score" class="hide">
+            <div id="high-scorer" class="hide">
                 <p class="align-center hide" id="high-score">Wow, congratulations,<br> Your score is:<span
                         id="high-score-user">100</span> Amazing, you truly know your Matrix
                     characters!<br>
@@ -176,6 +141,8 @@
                 <button class="btn" id="landHomeBtn" aria-label="Go back to the home page">Home</button>
             </div>
         </div>
+
+
         <!--Quiz Container -->
         <section id="game-container" class="hide width-mobile posAbso">
             <h2 class="align-center" id="matrix-quiz">The Matrix Quiz</h2>
@@ -184,8 +151,7 @@
                     <img src="assets/images/matrix-main-characters.webp" alt="main characters of the Matrix film">
                     <hr class="center posAbso img-underline" id="questions-underline">
                 </div>
-                <h2 id="questions-count"><span id="numOn">1</span>/ <span id="totalNum">25</span>
-                </h2>
+
                 <p id="question">What is the name of this character?</p>
             </header>
 
