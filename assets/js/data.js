@@ -38,7 +38,7 @@ const matrixCharacters = [ {
 		options: `<li class="align-center"><input class="wrong" type="radio" id="agent-smith" name="character" value="Agent Smith"><label for="agent-smith"> Agent Smith </label></li>`
 	}, ]
 }, {
-	pic: `<img src="assets/images/trinity.webp">`,
+	pic: `<img src="assets/images/trinity-matrix.webp">`,
 	answers: [ {
 		options: `<li class="align-center"><input type="radio" id="dozer" name="character" value="Dozer"><label for="dozer"> Dozer </label></li>`
 	}, {
@@ -116,7 +116,7 @@ const matrixCharacters = [ {
 		options: `<li class="align-center"><input  class="correct" type="radio" id="switch" name="character" value="Switch"><label for="switch"> Switch </label></li>`
 	}, ]
 }, {
-	pic: `<img src="assets/images/tank.webp">`,
+	pic: `<img src="assets/images/tank-matrix.webp">`,
 	answers: [ {
 		options: `<li class="align-center"><input class="wrong" type="radio" id="cypher" name="character" value="Cypher"><label for="cypher"> Cypher </label></li>`
 	}, {
