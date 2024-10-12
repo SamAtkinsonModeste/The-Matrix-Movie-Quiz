@@ -157,16 +157,67 @@ The following colors have been incorporated throughout the app to create contras
 - **Purpose:** A solid base color that adds contrast to the lighter hues, emphasizing the Matrix's dark and mysterious aesthetic while keeping a sleek, modern look.
 
 ## Styling
+### CSS Features
+- **Flexbox:**
 
-<div align="center">
-Although the focus was programming I still managed to add a fair bit of css.
- </div>
+  - Used Flexbox for building responsive and flexible layouts.
+
+  - Ensured proper alignment of quiz components such as images, buttons, and text within containers for a consistent look across devices.
+
+  - Applied Flexbox for both horizontal and vertical centering, improving the layout structure for different screen sizes.
+
+
+- **Linear Gradients:**
+
+  - Utilized linear gradients to create smooth transitions between background colors, adding depth and visual appeal to various sections of the app.
+
+  - Applied gradients for elements like buttons and headers to emphasize interaction points and enhance the futuristic aesthetic.
+
+- **Text Shadow:**
+
+  -  Added subtle text shadows to quiz headings and key text elements to enhance readability and provide a more immersive experience.
+
+  - Used shadows sparingly to maintain a balance between visual effect and legibility.
+
+
+- **Media Queries:**
+
+  - Implemented responsive design with media queries to ensure the app works smoothly across various screen sizes, including mobile, tablet, and desktop devices.
+
+  - Adjusted layout, font sizes, and spacing to maintain usability and readability on smaller screens.
+
+
+
 
 # Features
 
-## Navigation Bars
 
-## Mobile Navigation
+## Game Introduction Page
+The Matrix Quiz begins by immersing mentioning the three key characters.<br> A brief explanation follows, informing the user that they are about to embark on a quiz adventure.<br> Using the iconic choice from the Matrix, the user is asked if they are ready to take the _blue or red pill_.<br> If the user decides to take the pill they can proceed down the rabbit hole by clicking the Let's Begin button which takes them to the game entry point. 
+
+
+## Game Entry
+At the entry point of the Matrix Quiz, players are presented with two buttons and an input field. <br>The input field is used to enter the player's name, which is required to start the quiz.
+
+The _How To Play_  button opens an overlay with detailed instructions on how to play the game, along with the rules.
+The _Start Quiz_ button is used to start the quiz. However, if the player has not entered their name, a pop-up alert will inform them that the name is required, and the quiz will not begin until the name is provided.
+
+## Game Buttons
+In the Matrix Quiz, users interact with several buttons to navigate and complete the quiz:
+
+- **Five character named buttons:**
+  -  These buttons display different character names, and the user selects one to guess the correct name of the character shown in the image. When a button is selected, it changes colour to indicate the user's choice.
+
+- **Home button:**
+  -  This button allows the user to return to the game entry point, where they can restart or adjust their setup.
+
+- **Next button:**
+  - After choosing a character name, clicking the Next button will take the user to the next question in the quiz.
+
+- **Submit button:** 
+  -  Once all questions have been answered, a Submit button appears, allowing the user to submit their answers for final evaluation.
+
+These buttons provide a simple and engaging way to navigate through the quiz.
 
 
 
