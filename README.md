@@ -96,11 +96,6 @@ User Goals are:
 </div>
 
 ## Fonts
-
-<div align="center">
-  <img src="assets/images/fonts.png" alt="Font Amandine">
-</div>
-
 The design of the Matrix Quiz app makes use of two distinct fonts to enhance the visual style and user experience:
 
 ## Matrix Font
@@ -127,12 +122,12 @@ The design of the Matrix Quiz app makes use of two distinct fonts to enhance the
 
 
 ## Colour Palette
+The following colors have been incorporated throughout the app to create contrast, highlight important elements, and add depth to the user interface.
 
 <div align="center">
   <img src="assets/images/colour-pallete.png" alt="Colour palette of 6six different colours">
 </div>
-
-The following colors have been incorporated throughout the app to create contrast, highlight important elements, and add depth to the user interface.
+<br>
 
 1.**White:** `#FDFCF7`
 - **Usage:** This soft white color is used as the primary background color, providing a clean and neutral canvas for the app's content. It ensures readability without straining the user's eyes. 
