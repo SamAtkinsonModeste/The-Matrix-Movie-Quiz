@@ -4,10 +4,11 @@
 
 /*Colour Variables*/
 :root {
-    --white: #FDFCF7;
+    --white: rgb(253, 252, 247);
     --black: rgb(10, 14, 25);
     --accent: rgb(75, 233, 251);
     --mid-blue: rgb(63, 161, 191);
+    --deep-blue: rgb(19, 49, 58);
 }
 
 
@@ -137,8 +138,6 @@ ul {
 #overlayPlayAgain {
     font-size: 0.8rem;
     background: linear-gradient(154deg, rgba(75, 233, 251, 0.6) -30%, rgba(10, 14, 25, 0.9) 24%, rgba(10, 14, 25, 0.9) 80%, rgba(75, 233, 251, 0.6));
-    width: 96%;
-    margin-top: -14px;
     padding: 0.550rem;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -151,20 +150,44 @@ ul {
 }
 
 
+#overlay-how-to-play {
+    height: 455px;
+    max-width: 650px;
+}
+
+#how-to-play-head-list {
+
+    margin-top: 25%;
+
+}
+
+#how-to-play-ul {
+    padding-left: 30px;
+    font-size: 1rem;
+    line-height: 30px;
+}
+
+#how-to-play-ul li {
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
 #welcome-text {
+    margin-top: -30px;
     max-width: 700px;
 }
 
 .red-pill {
     color: #dc143c;
     text-shadow: 0 1px 2px var(--white);
-    font-size: 2em;
+    font-size: 1.2em;
 }
 
 .blue-pill {
     color: #0000ff;
     text-shadow: 0 1px 2px var(--white);
-    font-size: 2em;
+    font-size: 1.2em;
 }
 
 .btn-home {
@@ -229,14 +252,20 @@ label[for="player-name"] {
     left: 6px;
 }
 
-#overlay-how-to-play,
+
 #overlayPlayAgain {
-    top: 200px;
-    left: 6px;
+    left: 2px;
+
 }
 
 #overlay-how-to-play,
-#users-score,
+#overlayPlayAgain {
+    top: 100px;
+
+}
+
+
+#overlay-how-to-play,
 #overlayPlayAgain {
     border: solid var(--white) 0.005rem;
     box-shadow: inset 0 0 8px 2px var(--white);
@@ -244,8 +273,26 @@ label[for="player-name"] {
 
 }
 
+
+
+#users-score {
+    width: 98%;
+    max-width: 750px;
+    left: -3px;
+    border: solid var(--black) 0.350rem;
+    box-shadow: inset 0 0 18px 10px var(--black);
+    background: linear-gradient(154deg, rgba(10, 14, 25, 0.8) -20%, rgba(253, 252, 247, 0.9) 28%, rgba(253, 252, 247, 0.9) 90%, rgba(10, 14, 25, 0.8));
+    color: var(--black);
+    text-shadow: 0 1px 2px var(--accent);
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+
+
 #how-to-title {
     margin: 0.400rem 0;
+    font-size: 1.7rem;
 }
 
 
@@ -298,6 +345,7 @@ label[for="player-name"] {
     font-size: 0.8rem;
     padding-left: 5px;
     color: #3f0359;
+    margin: 0;
 }
 
 
@@ -410,10 +458,7 @@ input[type="radio"]:checked+label {
 }
 
 /**********USERS SCORE OVERLAY****************/
-#users-score {
-    color: var(--white);
-    font-size: 1.1rem;
-}
+
 
 .red-pill-two {
     color: #dc143c;
@@ -449,26 +494,13 @@ input[type="radio"]:checked+label {
 #unknownUlLow li,
 #unknownUlHigh li {
     width: 128px;
+    height: 128px;
     margin: 5px;
-    border: solid var(--white) 1px;
-
+    border: solid var(--black) 1px;
+    padding: 0.075rem;
 }
 
-#knownUlLow li:nth-child(odd):last-child:not(:only-child),
-#knownUlHigh li:nth-child(odd):last-child:not(:only-child),
-#unknownUlLow li:nth-child(odd):last-child:not(:only-child),
-#unknownUlHigh li:nth-child(odd):last-child:not(:only-child) {
-    width: 100%;
-    padding-left: 25%;
 
-}
-
-#knownUlLow li:nth-child(odd):last-child:not(:only-child) img,
-#knownUlHigh li:nth-child(odd):last-child:not(:only-child) img,
-#unknownUlLow li:nth-child(odd):last-child:not(:only-child) img,
-#unknownUlHigh li:nth-child(odd):last-child:not(:only-child) img {
-    width: 128px;
-}
 
 /***********PLAY Again Overlay*****************/
 #overlayPlayAgain {
@@ -479,10 +511,12 @@ input[type="radio"]:checked+label {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #question-play-again {
-    font-size: 1.1rem;
+    width: 100%;
+    font-size: 1.2rem;
     margin-top: 40px;
 }
 
@@ -591,6 +625,11 @@ input[type="radio"]:checked+label {
 
     /**********USERS SCORE**********************/
 
+    #users-score {
+        max-width: 750px;
+    }
+
+
     #congratsText {
         font-size: 1.5rem;
         line-height: 30px;
@@ -610,24 +649,10 @@ input[type="radio"]:checked+label {
     #unknownUlLow li,
     #unknownUlHigh li {
         width: 100px;
+        height: 100px;
         margin: 3px;
     }
 
-    #knownUlLow li:nth-child(odd):last-child:not(:only-child),
-    #knownUlHigh li:nth-child(odd):last-child:not(:only-child),
-    #unknownUlLow li:nth-child(odd):last-child:not(:only-child),
-    #unknownUlHigh li:nth-child(odd):last-child:not(:only-child) {
-        width: 100px;
-        margin: 3px;
-        padding-left: 0;
-    }
-
-    #knownUlLow li:nth-child(odd):last-child:not(:only-child) img,
-    #knownUlHigh li:nth-child(odd):last-child:not(:only-child) img,
-    #unknownUlLow li:nth-child(odd):last-child:not(:only-child) img,
-    #unknownUlHigh li:nth-child(odd):last-child:not(:only-child) img {
-        width: 100px;
-    }
 
     #characters-known-low,
     #characters-known-high,
@@ -639,10 +664,46 @@ input[type="radio"]:checked+label {
     /**************OVEERLAYS INFO*********************/
 
     #overlay-how-to-play,
-    #users-score,
     #overlayPlayAgain {
-        top: 46px;
-        left: 14px;
+        top: 30%;
+        left: 7%;
+    }
+
+    #overlayPlayAgain {
+        max-width: 700px;
+        left: 36px;
+
+    }
+
+    #users-score {
+        top: 75px;
+    }
+
+    #overlay-how-to-play {
+        top: 150px;
+        left: 7%;
+        height: 600px;
+    }
+
+    #how-to-play-head-list {
+        margin-top: 10%;
+    }
+
+    #how-to-title {
+        font-size: 2rem;
+    }
+
+
+    #how-to-play-ul {
+        font-size: 1.5rem;
+        line-height: 40px;
+    }
+
+
+
+    #how-to-play-ul li {
+        margin-top: 45px;
+        margin-left: 20px;
     }
 
 
@@ -654,7 +715,6 @@ input[type="radio"]:checked+label {
     #question-play-again {
         font-size: 2rem;
         margin-top: 40px;
-        width: 100%;
     }
 
     #play-again .btn {
@@ -677,12 +737,45 @@ input[type="radio"]:checked+label {
         max-width: 400px;
     }
 
+
+    /**********OVERLAYS******************/
+    /**HOW TO PLAY**/
+    #overlay-how-to-play {
+        left: 18%;
+    }
+
+    #how-to-title {
+        font-size: 2.5rem;
+    }
+
+    #how-to-play-ul {
+        font-size: 1.8rem;
+        line-height: 45px;
+        margin-left: 20px;
+    }
+
+    .close {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    /****Home or Play Agaian********/
+    #overlayPlayAgain {
+        max-width: 950px;
+        top: 237px;
+        left: 36px;
+
+    }
+
     /**********Game Container**********************/
     #game-container {
 
         margin: 40px auto;
         max-height: 760px;
-        max-width: 1010px;
+        max-width: 960px;
+        margin-left: 5px;
     }
 
     #matrix-quiz {
@@ -707,9 +800,6 @@ input[type="radio"]:checked+label {
         bottom: -19px;
     }
 
-    #question {
-        margin: 0;
-    }
 
     #answers {
         /* border: solid 2px greenyellow; */
@@ -758,4 +848,27 @@ input[type="radio"]:checked+label {
         font-size: 4rem;
         margin-top: 40px;
     }
+
+
+    /*********OVERLAYS****************/
+    /**SCORE RESULTS****/
+    #users-score {
+        top: 5px;
+        max-width: 980px
+    }
+
+    #knownUlLow,
+    #knownUlHigh,
+    #unknownUlLow,
+    #unknownUlHigh {
+        max-width: 950px;
+        margin: 0 auto;
+    }
+}
+
+
+@media (min-width: 1300px) {
+
+    /****GAME CONTAINER AND NESTED ELEMENTS*********/
+
 }
