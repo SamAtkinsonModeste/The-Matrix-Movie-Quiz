@@ -381,6 +381,7 @@ input[type="radio"]:checked+label {
 
 #home-next-buttons {
     width: 100%;
+    max-width: 400px;
     display: flex;
     justify-content: space-around;
 
@@ -497,7 +498,7 @@ input[type="radio"]:checked+label {
     #movie-poster,
     #quiz-poster,
     .poster-questions {
-        width: 550px;
+        width: 400px;
         margin: 0 auto;
     }
 
@@ -517,7 +518,7 @@ input[type="radio"]:checked+label {
     }
 
     #quiz-poster {
-        width: 640px;
+        width: 410px;
     }
 
 
@@ -542,7 +543,7 @@ input[type="radio"]:checked+label {
 
     #matrix-quiz {
         font-size: 3rem;
-        margin-bottom: 0;
+        margin: 0;
     }
 
     .poster-questions {
@@ -564,10 +565,12 @@ input[type="radio"]:checked+label {
         height: 0;
         margin-top: 0;
         width: 50%;
+        max-width: 500px;
     }
 
     #answer-options {
         width: 50%;
+        max-width: 350px;
     }
 
     input[type="radio"]+label {
@@ -656,7 +659,70 @@ input[type="radio"]:checked+label {
 @media (min-width: 1024px) {
     #game-container {
         position: relative;
-        margin: 10px auto;
+        margin: 40px auto;
+        max-height: 760px;
+        max-width: 1010px;
+    }
+
+    #matrix-quiz {
+        margin-top: -14px;
+        margin-bottom: 0;
+        /* border: solid red 1px; */
+    }
+
+    #question-numbers,
+    .poster-questions {
+        max-height: 250px;
+
+    }
+
+    .poster-questions {
+        max-width: 468px;
+
+    }
+
+    .img-underline {
+        bottom: -16px;
+        left: 21px;
+    }
+
+    #question {
+        margin: 0;
+    }
+
+    #answers {
+        /* border: solid 2px greenyellow; */
+        max-height: 300px;
+        justify-content: space-between;
+    }
+
+    #answer-options {
+        /* border: solid rgb(212, 14, 226) 1px; */
+        max-width: 950px;
+    }
+
+    #answer-options ul {
+        margin: 0;
+
+    }
+
+
+    #answer-options ul li {
+        margin: 2px 0;
+
+    }
+
+
+
+    #character-image {
+        max-width: 240px;
+        margin-left: 88px;
+
+    }
+
+    #home-next-buttons {
+        margin-top: -42px;
+
     }
 
     #play-again .btn {
