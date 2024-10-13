@@ -115,7 +115,8 @@ ul {
     top: -26px;
 }
 
-.img-underline {
+.img-underline,
+.img-underline-game {
     height: 6px;
     width: 95%;
     bottom: 3px;
@@ -147,6 +148,11 @@ ul {
     text-shadow: 0 1px 2px var(--accent);
     letter-spacing: 2px;
     line-height: 1.3rem;
+}
+
+
+#welcome-text {
+    max-width: 700px;
 }
 
 .red-pill {
@@ -263,8 +269,8 @@ label[for="player-name"] {
 /******quiz container*************/
 
 #game-container {
-    top: 18px;
-    left: 5px;
+    position: relative;
+    margin: 10px auto;
     background: var(--white);
     color: var(--black);
     height: fit-content;
@@ -381,9 +387,10 @@ input[type="radio"]:checked+label {
 
 #home-next-buttons {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
 }
 
@@ -392,6 +399,8 @@ input[type="radio"]:checked+label {
     color: var(--white);
     text-shadow: 0 1px 2px var(--black);
     letter-spacing: 1px;
+    margin-right: 10px;
+    margin-left: 10px;
     border: none;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -431,6 +440,7 @@ input[type="radio"]:checked+label {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 
 }
 
@@ -440,6 +450,7 @@ input[type="radio"]:checked+label {
 #unknownUlHigh li {
     width: 128px;
     margin: 5px;
+    border: solid var(--white) 1px;
 
 }
 
@@ -498,7 +509,7 @@ input[type="radio"]:checked+label {
     #movie-poster,
     #quiz-poster,
     .poster-questions {
-        width: 400px;
+        width: 600px;
         margin: 0 auto;
     }
 
@@ -517,10 +528,9 @@ input[type="radio"]:checked+label {
 
     }
 
-    #quiz-poster {
-        width: 410px;
+    .img-underline {
+        left: 15px;
     }
-
 
     #controls {
         width: 450px;
@@ -536,8 +546,6 @@ input[type="radio"]:checked+label {
     /*********GAME CONTAINER*******************/
 
     #game-container {
-        top: 20px;
-        left: 19px;
         max-width: 723px;
     }
 
@@ -551,9 +559,8 @@ input[type="radio"]:checked+label {
         margin-left: auto;
     }
 
-    #questions-under1 {
-        width: 100%;
-        left: 1px;
+    .img-underline-game {
+        left: 25px;
     }
 
     #question {
@@ -594,7 +601,7 @@ input[type="radio"]:checked+label {
     #knownUlHigh,
     #unknownUlLow,
     #unknownUlHigh {
-        max-width: 570px;
+        max-width: 700px;
         margin: 0 auto;
     }
 
@@ -611,14 +618,15 @@ input[type="radio"]:checked+label {
     #unknownUlLow li:nth-child(odd):last-child:not(:only-child),
     #unknownUlHigh li:nth-child(odd):last-child:not(:only-child) {
         width: 100px;
-        margin: 3px
+        margin: 3px;
+        padding-left: 0;
     }
 
     #knownUlLow li:nth-child(odd):last-child:not(:only-child) img,
     #knownUlHigh li:nth-child(odd):last-child:not(:only-child) img,
     #unknownUlLow li:nth-child(odd):last-child:not(:only-child) img,
     #unknownUlHigh li:nth-child(odd):last-child:not(:only-child) img {
-        width: 10px;
+        width: 100px;
     }
 
     #characters-known-low,
@@ -646,6 +654,7 @@ input[type="radio"]:checked+label {
     #question-play-again {
         font-size: 2rem;
         margin-top: 40px;
+        width: 100%;
     }
 
     #play-again .btn {
@@ -657,8 +666,20 @@ input[type="radio"]:checked+label {
 }
 
 @media (min-width: 1024px) {
+
+    /******Overlay Home*********/
+    #movie-poster {
+        max-width: 375px;
+    }
+
+    /*****Entry Controls Container*******/
+    #quiz-poster {
+        max-width: 400px;
+    }
+
+    /**********Game Container**********************/
     #game-container {
-        position: relative;
+
         margin: 40px auto;
         max-height: 760px;
         max-width: 1010px;
@@ -667,7 +688,7 @@ input[type="radio"]:checked+label {
     #matrix-quiz {
         margin-top: -14px;
         margin-bottom: 0;
-        /* border: solid red 1px; */
+
     }
 
     #question-numbers,
@@ -681,9 +702,9 @@ input[type="radio"]:checked+label {
 
     }
 
-    .img-underline {
-        bottom: -16px;
-        left: 21px;
+    .img-underline-game {
+        left: 18px;
+        bottom: -19px;
     }
 
     #question {
@@ -722,6 +743,8 @@ input[type="radio"]:checked+label {
 
     #home-next-buttons {
         margin-top: -42px;
+        max-width: 400px;
+        margin-left: 6px;
 
     }
 
