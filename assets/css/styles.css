@@ -870,5 +870,32 @@ input[type="radio"]:checked+label {
 @media (min-width: 1300px) {
 
     /****GAME CONTAINER AND NESTED ELEMENTS*********/
+    #game-container {
+        max-width: 1200px;
+        max-height: 820px;
+        margin-left: 0;
+        margin: 50px auto;
+    }
+
+    /***USERS SCORE OVERLAY********/
+    #users-score,
+    #overlayPlayAgain {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    #users-score {
+        max-width: 1250px;
+        margin: 50px auto;
+
+    }
+
+
+    #overlayPlayAgain {
+        max-width: 1000px;
+        margin: 250px auto;
+
+    }
 
 }
