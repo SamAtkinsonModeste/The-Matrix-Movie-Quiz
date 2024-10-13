@@ -48,7 +48,7 @@ const matrixCharacters = [ {
 	}, {
 		options: `<li class="align-center"> <input  class="wrong" type="radio" id="mifune" name="character" value="Mifune"><label for="mifune"> Mifune</label></li>`
 	}, {
-		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="sepraph"> Seraph </label></li>`
+		options: `<li class="align-center"><input class="wrong" type="radio" id="seraph" name="character" value="Seraph"><label for="seraph"> Seraph </label></li>`
 	}, ]
 }, {
 	pic: `<img src="assets/images/the-oracle.webp">`,
@@ -126,7 +126,7 @@ const matrixCharacters = [ {
 	}, {
 		options: `<li class="align-center"><input  class="correct" type="radio" id="tank" name="character" value="Tank"><label for="tank"> Tank </label></li>`
 	}, {
-		options: `<li class="align-center"><input class="wrong" type="radio" id="councillar" name="character" value="Councillar Hamann"><label for="councillar-hamann"> Councillar Hamann </label></li>`
+		options: `<li class="align-center"><input class="wrong" type="radio" id="councillar-hamann" name="character" value="Councillar Hamann"><label for="councillar-hamann"> Councillar Hamann </label></li>`
 	}, ]
 }, {
 	pic: `<img src="assets/images/mouse.webp">`,
@@ -187,7 +187,7 @@ const matrixCharacters = [ {
 	}, {
 		options: `<li class="align-center"><input class="wrong" type="radio" id="zee" name="character" value="Zee"><label for="zee"> Zee </label></li>`
 	}, {
-		options: `<li class="align-center"><input class="wrong" type="radio" id="bane" name="character" value="Bane"><label for="Bane"> Bane </label></li>`
+		options: `<li class="align-center"><input class="wrong" type="radio" id="bane" name="character" value="Bane"><label for="bane"> Bane </label></li>`
 	}, {
 		options: `<li class="align-center"><input class="wrong" type="radio" id="architect" name="character" value="Architect"><label for="architect"> Architect </label></li>`
 	}, {
@@ -300,7 +300,7 @@ const matrixCharacters = [ {
 }, {
 	pic: `<img src="assets/images/zee.webp">`,
 	answers: [ {
-		options: `<li class="align-center"><input  class="wrong" type="radio" id="jason-lock" name="character" value="Jason Lock"><label for="Jason Lock"> Jason Lock</label></li>`
+		options: `<li class="align-center"><input  class="wrong" type="radio" id="jason-lock" name="character" value="Jason Lock"><label for="jason-lock"> Jason Lock</label></li>`
 	}, {
 		options: `<li class="align-center"><input class="correct" type="radio" id="zee" name="character" value="Zee"><label for="zee"> Zee </label></li>`
 	}, {
