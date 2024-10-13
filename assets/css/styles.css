@@ -741,6 +741,7 @@ input[type="radio"]:checked+label {
     /**********OVERLAYS******************/
     /**HOW TO PLAY**/
     #overlay-how-to-play {
+        top: 50px;
         left: 18%;
     }
 
@@ -879,10 +880,20 @@ input[type="radio"]:checked+label {
 
     /***USERS SCORE OVERLAY********/
     #users-score,
-    #overlayPlayAgain {
+    #overlayPlayAgain,
+    #overlay-how-to-play {
         position: relative;
         top: 0;
         left: 0;
+    }
+
+    #overlay-how-to-play {
+        max-width: 800px;
+        height: 700px;
+        margin: 0 auto;
+        margin-top: -700px;
+
+
     }
 
     #users-score {
