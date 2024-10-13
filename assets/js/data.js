@@ -323,18 +323,5 @@ const matrixCharacters = [ {
 	}, {
 		options: `<li class="align-center"><input class="wrong" type="radio" id="agent-smith" name="character" value="agent-smith"><label for="agent-smith">Agent Smith </label></li>`
 	}, ]
-},
-{
-	pic: `<img src="assets/images/mifune.webp">`,
-	answers: [ {
-		options: `<li class="align-center"><input  class="wrong" type="radio" id="trinity" name="character" value="Trinity"><label for="trinity"> Trinity</label></li>`
-	}, {
-		options: `<li class="align-center"><input class="wrong" type="radio" id="zee" name="character" value="Zee"><label for="zee"> Zee </label></li>`
-	}, {
-		options: `<li class="align-center"><input  class="correct" type="radio" id="mifune" name="character" value="Mifune"><label for="mifune"> Mifune</label></li>`
-	}, {
-		options: `<li class="align-center"><input class="wrong" type="radio" id="merovingian" name="character" value="Merovingian"><label for="merovingian"> Merovingian </label></li>`
-	}, {
-		options: `<li class="align-center"><input class="wrong" type="radio" id="architect" name="character" value="Architect"><label for="architect">Architect </label></li>`
-	}, ]
-}, ];
+
+}]
