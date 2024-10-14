@@ -110,47 +110,29 @@
 
 
             <!-- LOW SCORE CONGRATS MESSAGE   -->
-            <div id="low-score" class="hide">
-                <p class="align-center" id="congratsText">Well done!<br> Your score is:<span
-                        id="low-score-user">100</span><br>Keep going to see
-                    how
-                    many more characters you know from 'The Matrix'.</p>
+            <div id="player-score" class="hide">
+                <p class="align-center" id="congratsText">Congratulations!<br> Your score is:<span
+                        id="user-score">100</span><br>
+                    Do you think you could improve on your score?</p>
                 <!-- Displays the correct characters-->
-                <div id="charactersKnownLow" class="hide">
-                    <h2 id="characters-known-low" class="align-center">Characters you know!</h2>
-                    <ul id="knownUlLow"></ul>
+                <div id="charactersKnown" class="hide">
+                    <h2 id="characters-known" class="align-center">Characters you got correct!</h2>
+                    <ul id="knownUl"></ul>
                 </div>
                 <!-- Displays the characters not guessed correctly-->
-                <div id="charactersUnknownLow" class="hide">
-                    <h2 id="characters-unknown-low" class="align-center">Characters you didn't know!</h2>
-                    <ul id="unknownUlLow"></ul>
+                <div id="charactersUnknown" class="hide">
+                    <h2 id="characters-unknown" class="align-center">Characters you got incorrect.</h2>
+                    <ul id="unknownUl"></ul>
                 </div>
             </div>
 
-            <!-- HIGH SCORE CONGRATS MESSAGE -->
-            <div id="high-scorer" class="hide">
-                <p class="align-center hide" id="high-score">Wow, congratulations,<br> Your score is:<span
-                        id="high-score-user">100</span> Amazing, you truly know your Matrix
-                    characters!<br>
-                    You clearly took the <span class="red-pill-two">Red Pill!</span></p>
-                <!-- Displays the correct characters-->
-                <div id="charactersKnownHigh" class="hide">
-                    <h2 id="characters-known-high" class="align-center">Characters you know!</h2>
-                    <ul id="knownUlHigh"></ul>
-                </div>
-                <!-- Displays the characters not guessed correctly-->
-                <div id="charactersUnknownHigh" class="hide">
-                    <h2 id="characters-unknown-high" class="align-center">Characters you didn't know!</h2>
-                    <ul id="unknownUlHigh"></ul>
-                </div>
-            </div>
 
         </div>
 
         <!--Display to give a player the option to play again or go home-->
         <div id="overlayPlayAgain" class="hide posAbso width-mobile">
             <div id="play-again">
-                <h2 class="align-center" id="question-play-again">Play again or Go Home?</h2>
+                <h2 class="align-center" id="question-play-again">Play again or Exit?</h2>
                 <button class="btn" id="start-again" aria-label="replay the quiz">Replay</button>
                 <button class="btn" id="landHomeBtn" aria-label="Go back to the home page">Home</button>
             </div>
