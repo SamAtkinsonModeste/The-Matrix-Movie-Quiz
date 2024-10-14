@@ -517,22 +517,18 @@ input[type="radio"]:checked+label {
     margin-top: 10px;
 }
 
-#characters-known-low,
-#characters-known-high,
-#characters-unknown-low,
-#characters-unknown-high {
+#characters-known,
+#characters-unknown {
     font-size: 1.2rem;
 }
 
 
-#characters-unknown-low {
+#characters-unknown {
     font-size: 0.850rem;
 }
 
-#knownUlLow,
-#knownUlHigh,
-#unknownUlLow,
-#unknownUlHigh {
+#knownUl,
+#unknownUl {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -540,10 +536,8 @@ input[type="radio"]:checked+label {
 
 }
 
-#knownUlLow li,
-#knownUlHigh li,
-#unknownUlLow li,
-#unknownUlHigh li {
+#knownUl li,
+#unknownUl li {
     width: 128px;
     height: 128px;
     margin: 5px;
@@ -687,28 +681,20 @@ input[type="radio"]:checked+label {
         margin-top: -10px;
     }
 
-    #knownUlLow,
-    #knownUlHigh,
-    #unknownUlLow,
-    #unknownUlHigh {
+    #knownUl #unknownUl {
         max-width: 700px;
         margin: 0 auto;
     }
 
-    #knownUlLow li,
-    #knownUlHigh li,
-    #unknownUlLow li,
-    #unknownUlHigh li {
+    #knownUl li,
+    #unknown li {
         width: 100px;
         height: 100px;
         margin: 3px;
     }
 
 
-    #characters-known-low,
-    #characters-known-high,
-    #characters-unknown-low,
-    #characters-unknown-high {
+    #characters-known #characters-unknown {
         font-size: 1.5rem;
     }
 
@@ -909,10 +895,7 @@ input[type="radio"]:checked+label {
         max-width: 980px
     }
 
-    #knownUlLow,
-    #knownUlHigh,
-    #unknownUlLow,
-    #unknownUlHigh {
+    #knownUl #unknownUl {
         max-width: 950px;
         margin: 0 auto;
     }
