@@ -38,6 +38,8 @@ document.addEventListener( "DOMContentLoaded", () => {
 		setNextCharacter();
 		
 	});
+
+	elementId("start-again").addEventListener('click', playAgain );
 	
 	
 });
@@ -65,6 +67,8 @@ function gameEntryButtons() {
 			} else if (this.getAttribute('id') === 'close-users-score') {
 				elementId('users-score').classList.add('hide');
 				elementId('overlayPlayAgain').classList.remove('hide');
+			} else if (this.getAttribute('id') === 'landHomeBtn') {
+				exitGame();
 			}
 			  
 			
@@ -96,7 +100,8 @@ function randomArray( arr ) {
  * 
  */
 function startQuiz(){
-
+	playAgain();
+	elementId('player-name').focus();
 	if (  elementId('player-name').value === "" ) {
 		elementId('alert-name').classList.remove('hide');
 		elementId("start-game").disabled = true;
@@ -113,6 +118,7 @@ function startQuiz(){
 			document.getElementById( 'entry-controls-container' ).classList.add( 'hide' );
 		}
 	}
+ 
   randomCharacter = randomArray(matrixCharacters);
   currentQuestionIndex = 0;
   setNextCharacter();
@@ -130,9 +136,8 @@ function startQuiz(){
  * with the function catch the answers function as it's function.
  */
 function setNextCharacter(){
-  
+	
  displayCharacterOptions(randomCharacter[currentQuestionIndex]);
- 
  let selectedRadio = null;
  const radioBtns = document.querySelectorAll('input[name="character"]');
 
@@ -154,7 +159,7 @@ optionsContainer.addEventListener( 'click', catchAnswers );
 }
 
 
-/**
+/**created a function to make any strings 
  * show options and character image function
  * Uses template literals to add:
  * 1 .Image of character.
@@ -282,7 +287,55 @@ function usersResults() {
 }
 
 
+/**
+ * play again 
+ * takes you to game container
+ * resets score and arrays
+ */
+function playAgain() {
+		imagesOfusersQuestionsCorrect.length = [];
+		imagesOfusersQuestionsWrong.length = [];
+		currentScore = 0;
+		finalScore = 0;
+		currentQuestionIndex =0;
+		elementId('nextBtn').classList.add('hide');
+		elementId('submitBtn').classList.add('hide')
+		elementId('knownUl').innerHTML = "";
+		elementId('unknownUl').innerHTML = "";
+		const radioBtns = document.querySelectorAll( 'input[name="character"]' );
+	for ( let btn of radioBtns ) {
+		if ( btn.checked === true ) {
+			btn.checked = false;
+		}
+	}
+    
+		elementId('game-container').classList.remove('hide');
+		elementId('overlayPlayAgain').classList.add('hide');
+}
 
+
+function exitGame() {
+	elementId('player-name').value = "";
+	imagesOfusersQuestionsCorrect.length = [];
+	imagesOfusersQuestionsWrong.length = [];
+	currentScore = 0;
+	finalScore = 0;
+	currentQuestionIndex =0;
+	elementId('nextBtn').classList.add('hide');
+	elementId('submitBtn').classList.add('hide')
+	elementId('knownUl').innerHTML = "";
+	elementId('unknownUl').innerHTML = "";
+	const radioBtns = document.querySelectorAll( 'input[name="character"]' );
+for ( let btn of radioBtns ) {
+	if ( btn.checked === true ) {
+		btn.checked = false;
+	}
+}
+
+	elementId('game-container').classList.add('hide');
+	elementId('overlayPlayAgain').classList.add('hide');
+	elementId('overlay-home').classList.remove('hide');
+}
 
 
 
