@@ -135,7 +135,8 @@ ul {
 #controls,
 #overlay-how-to-play,
 #users-score,
-#overlayPlayAgain {
+#overlayPlayAgain,
+#alert-name {
     font-size: 0.8rem;
     background: linear-gradient(154deg, rgba(75, 233, 251, 0.6) -30%, rgba(10, 14, 25, 0.9) 24%, rgba(10, 14, 25, 0.9) 80%, rgba(75, 233, 251, 0.6));
     padding: 0.550rem;
@@ -205,6 +206,55 @@ ul {
     display: flex;
     flex-direction: column;
 }
+
+/*****Alert Div Input Name*********/
+#alert-name {
+    width: 297px;
+    height: 60px;
+    margin: 0 auto;
+    border: solid 2px var(--white);
+    border-bottom-left-radius: 0;
+    background: linear-gradient(154deg, rgba(75, 233, 251, 0.8) -30%, rgba(10, 14, 25, 0.9) 24%, rgba(10, 14, 25, 0.9) 80%, rgba(75, 233, 251, 0.7));
+    transform: translateY(9px);
+    -webkit-transform: translateY(9px);
+    -moz-transform: translateY(9px);
+    -ms-transform: translateY(9px);
+    -o-transform: translateY(9px);
+}
+
+#alert-name p {
+    transform: translateY(-38px);
+    margin: 0;
+    padding: 0 0.090rem;
+    width: 200px;
+    -webkit-transform: translateY(-38px);
+    -moz-transform: translateY(-38px);
+    -ms-transform: translateY(-38px);
+    -o-transform: translateY(-38px);
+}
+
+#alert-name p.red-pill {
+    width: 75px;
+}
+
+#arrow-down {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid;
+    border-top: 20px solid;
+    transform: translateY(-58px) translateX(-3px) rotate(225deg);
+    -webkit-transform: translateY(-58px) translateX(-3px) rotate(225deg);
+    -moz-transform: translateY(-58px) translateX(-3px) rotate(225deg);
+    -ms-transform: translateY(-58px) translateX(-3px) rotate(225deg);
+    -o-transform: translateY(-58px) translateX(-3px) rotate(225deg);
+}
+
+
+
+
 
 input[type="text"] {
     border: 1px solid var(--accent);
@@ -305,6 +355,7 @@ label[for="player-name"] {
     height: 35px;
     border: solid var(--accent) 0.005rem;
     padding: 8px;
+    margin-left: auto;
     font-size: 1.3em;
     border-radius: 50%;
     -webkit-border-radius: 50%;
