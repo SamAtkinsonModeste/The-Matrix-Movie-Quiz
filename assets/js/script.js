@@ -9,8 +9,10 @@ let randomCharacter, currentQuestionIndex;
 const optionsContainer = elementId( 'answer-options' );
 const imagesOfusersQuestionsCorrect = [];
 const imagesOfusersQuestionsWrong = [];
+let playersName;
 let currentScore = 0;
 let finalScore = 0;
+
 
 
 /**
@@ -34,6 +36,7 @@ document.addEventListener( "DOMContentLoaded", () => {
 	elementId('nextBtn').addEventListener('click', function(){
 		currentQuestionIndex++
 		setNextCharacter();
+		
 	});
 	
 	
@@ -59,7 +62,10 @@ function gameEntryButtons() {
 			} else if ( this.getAttribute( 'id' ) === 'submitBtn' ) {
 				elementId( 'entry-controls-container' ).classList.add( 'hide' );
 				elementId( 'game-container' ).classList.add( 'hide' );
-			} 
+			} else if (this.getAttribute('id') === 'close-users-score') {
+				elementId('users-score').classList.add('hide');
+				elementId('overlayPlayAgain').classList.remove('hide');
+			}
 			  
 			
 		} );
@@ -71,6 +77,9 @@ function gameEntryButtons() {
  * random array function
  * resuffles an array items order every time it is called
  * you can pass any array as the argument
+ * arr.sort code from the tutorial by Kyle Cook
+ * from web dev simplified
+ * https://www.youtube.com/watch?v=riDzcEQbX6k
  */
 function randomArray( arr ) {
 	//below resuffles the order of the arrays items
@@ -87,10 +96,8 @@ function randomArray( arr ) {
  * 
  */
 function startQuiz(){
-	console.log("I start the game");
-	const playerName = elementId( 'player-name' );
-	console.log(playerName)
-	if ( playerName.value === "" ) {
+
+	if (  elementId('player-name').value === "" ) {
 		elementId('alert-name').classList.remove('hide');
 		elementId("start-game").disabled = true;
 		const alertBoxClose = elementId('close-alert-btn');
@@ -100,7 +107,8 @@ function startQuiz(){
 		});
 
 	} else {
-		if ( playerName.value !== "" ) {
+		if (  elementId('player-name').value !== "" ) {
+			playersName = elementId('player-name').value 
 			document.getElementById( 'game-container' ).classList.remove( 'hide' );
 			document.getElementById( 'entry-controls-container' ).classList.add( 'hide' );
 		}
@@ -113,11 +121,36 @@ function startQuiz(){
 
 
 
-
+/**
+ * displays the questions
+ * nested for loops disable the inputs
+ * found on Micrsoft's AI Copilot
+ * one a user clicks on a input.
+ * listening click event on container with questions
+ * with the function catch the answers function as it's function.
+ */
 function setNextCharacter(){
   
  displayCharacterOptions(randomCharacter[currentQuestionIndex]);
+ 
+ let selectedRadio = null;
+ const radioBtns = document.querySelectorAll('input[name="character"]');
+
+ for (const radio of radioBtns) {
+	radio.addEventListener('change', (event) => {
+	  if (event.target.checked) {
+		for (const button of radioBtns) {
+		  if (button !== event.target) {
+			button.disabled = true;
+		  }
+		}
+		selectedRadio = event.target;
+		
+	  }
+	});
   
+}
+optionsContainer.addEventListener( 'click', catchAnswers );
 }
 
 
@@ -136,8 +169,27 @@ function displayCharacterOptions( option ) {
 	ulHTML += `</ul>`;
 	elementId( 'character-image' ).innerHTML = option.pic;
 	elementId( 'answer-options' ).innerHTML = ulHTML;
-	optionsContainer.addEventListener( 'click', catchAnswers );
 	
+	
+}
+
+/** 
+ * gets all the image elements
+*/
+function getCharacterImages(options) {
+
+const currentPic = elementId('character-image');
+options = currentPic.innerHTML 
+	return options;
+}
+
+
+/**
+ * Pushes my images to the different arrays
+ * can be used for any array
+ */
+function addToArray(item,arr) {
+  arr.push(item);
 }
 
 
@@ -148,35 +200,89 @@ function displayCharacterOptions( option ) {
  * seperates correct character images
  * seperates wrong character images
  */
-function catchAnswers( evt ) {
+function catchAnswers(evt ) {
 	const selectedBtn = evt.target;
 	const nextBtn = document.getElementById( 'nextBtn' );
 	const submitBtn = document.getElementById( 'submitBtn' );
+	const characterImage = getCharacterImages(randomCharacter[currentQuestionIndex]);
 	let radioBtn = selectedBtn;
-	const rightWholeKit = randomCharacter[ currentQuestionIndex ];
-	const wrongWholeKit = randomCharacter[ currentQuestionIndex ];
 	if ( radioBtn.tagName === 'INPUT' ) {
 		let input = radioBtn;
 		if ( input.classList.contains( 'correct' ) ) {
 			currentScore += 10;
-			let correctImage = rightWholeKit.pic;
-			imagesOfusersQuestionsCorrect.push( correctImage );
-		} else if ( radioBtn.tagName === 'INPUT' ) {
-			if ( input.classList.contains( 'wrong' ) ) {
-				let wrongImage = wrongWholeKit.pic;
-				imagesOfusersQuestionsWrong.push( wrongImage );
-			}
+			addToArray(characterImage, imagesOfusersQuestionsCorrect );
+			
+		} else if ( input.classList.contains( 'wrong' ) ) {
+			addToArray(characterImage, imagesOfusersQuestionsWrong );
+			
 		}
+
 		finalScore = currentScore;
-	}
+			
+		}
+		
+	
 	if ( randomCharacter.length > currentQuestionIndex + 1 ) {
 		nextBtn.classList.remove( 'hide' );
 	} else {
 		submitBtn.classList.remove( 'hide' );
+		submitBtn.addEventListener('click', usersResults);
 	}
+
+	
 }
 
 
-console.log(imagesOfusersQuestionsCorrect);
-console.log(imagesOfusersQuestionsWrong);
+/** 
+ * capitalise the first letter of the users name
+*/
+function capitalizeFirstLetter(string) {
+	return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  
+  
+  
+
+/** 
+ * displays the users name,
+ * score, correct image
+ * and incorrect images
+*/
+function usersResults() {
+	
+	elementId('users-score').classList.remove('hide');
+	elementId('player-score').classList.remove('hide');
+	elementId('charactersKnown').classList.remove('hide');
+	elementId('charactersUnknown').classList.remove('hide');
+	elementId('players-name').innerText = capitalizeFirstLetter(playersName);
+	elementId('correct-players').innerText = capitalizeFirstLetter(playersName);
+	elementId('incorrect-player').innerText = capitalizeFirstLetter(playersName);
+	elementId('user-score').innerText = finalScore;
+	if(imagesOfusersQuestionsCorrect.length !== 0) {
+		let correctHTML = ``;
+		for (let image of imagesOfusersQuestionsCorrect) {
+			correctHTML += `<li>${image}</li>`;
+		}
+
+		elementId('knownUl').innerHTML = correctHTML;
+	}
+
+	if(imagesOfusersQuestionsWrong.length !== 0) {
+		let wrongHTML = ``;
+		for (let pic of imagesOfusersQuestionsWrong) {
+			wrongHTML += `<li>${pic}</li>`;
+		}
+
+		elementId('unknownUl').innerHTML = wrongHTML;
+	}
+	
+
+
+
+}
+
+
+
+
+
 
