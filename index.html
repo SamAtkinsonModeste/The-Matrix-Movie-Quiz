@@ -109,19 +109,21 @@
             <button class="btn close" id="close-users-score" aria-label="Closes your score results">X</button>
 
 
-            <!-- LOW SCORE CONGRATS MESSAGE   -->
+            <!-- SCORE CONGRATS MESSAGE   -->
             <div id="player-score" class="hide">
-                <p class="align-center" id="congratsText">Congratulations!<br> Your score is:<span
-                        id="user-score">100</span><br>
+                <p class="align-center" id="congratsText">Congratulations <span id="players-name"></span>!<br> Your
+                    score is:<span id="user-score"> </span><br>
                     Do you think you could improve on your score?</p>
                 <!-- Displays the correct characters-->
                 <div id="charactersKnown" class="hide">
-                    <h2 id="characters-known" class="align-center">Characters you got correct!</h2>
+                    <h2 id="characters-known" class="align-center">Characters you got correct <span
+                            id="correct-players"></span>!</h2>
                     <ul id="knownUl"></ul>
                 </div>
                 <!-- Displays the characters not guessed correctly-->
                 <div id="charactersUnknown" class="hide">
-                    <h2 id="characters-unknown" class="align-center">Characters you got incorrect.</h2>
+                    <h2 id="characters-unknown" class="align-center">Characters you got incorrect <span
+                            id="incorrect-player"></span>.</h2>
                     <ul id="unknownUl"></ul>
                 </div>
             </div>
