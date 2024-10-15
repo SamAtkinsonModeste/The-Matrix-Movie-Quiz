@@ -220,6 +220,7 @@ ul {
     border: solid 2px var(--white);
     border-bottom-left-radius: 0;
     background: linear-gradient(154deg, rgba(75, 233, 251, 0.8) -30%, rgba(10, 14, 25, 0.9) 24%, rgba(10, 14, 25, 0.9) 80%, rgba(75, 233, 251, 0.7));
+    will-change: transform, translateY;
     transform: translateY(9px);
     -webkit-transform: translateY(9px);
     -moz-transform: translateY(9px);
@@ -426,16 +427,22 @@ label[for="player-name"] {
     margin-top: 83px;
     padding-top: 3px;
     border: solid 1px var(--black);
-    background: linear-gradient(var(--black), var(--mid-blue), var(--black));
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    box-shadow: inset 0 0 8px 1px var(--mid-blue);
+    background: var(--black);
+    border-radius: 8px;
+    padding: 0.3rem;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 #character-image img {
-    width: 100%;
+    display: block;
+    max-width: 162px;
+    margin: 0 auto;
+    margin-top: 4px;
+    border-radius: 8px;
 }
 
 
@@ -521,6 +528,9 @@ input[type="radio"]:checked+label {
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
 }
+
+
+
 
 /**********USERS SCORE OVERLAY****************/
 
@@ -659,10 +669,14 @@ input[type="radio"]:checked+label {
     }
 
 
-    #character-image {
-        height: 0;
-        margin-top: 0;
+    #character-image,
+    #character-image img {
         max-width: 359px;
+    }
+
+    #character-image {
+        height: fit-content;
+        margin-top: 0;
     }
 
     #answer-options {
@@ -859,6 +873,7 @@ input[type="radio"]:checked+label {
     }
 
     #question {
+        will-change: transform, translateY;
         transform: translateY(-140px);
         -webkit-transform: translateY(-140px);
         -moz-transform: translateY(-140px);
@@ -868,6 +883,7 @@ input[type="radio"]:checked+label {
 
     .poster-questions {
         max-width: 600px;
+        will-change: transform, translate;
         transform: translate(-21px, -71px);
         -webkit-transform: translate(-21px, -71px);
         -moz-transform: translate(-21px, -71px);
@@ -876,8 +892,9 @@ input[type="radio"]:checked+label {
     }
 
     .img-underline-game {
-        left: 25px;
+        left: 119px;
         bottom: -94px;
+        width: 80%;
     }
 
 
@@ -894,6 +911,7 @@ input[type="radio"]:checked+label {
 
     #answer-options ul {
         margin: 0;
+        will-change: transform, translateX;
         transform: translateX(9px);
         -webkit-transform: translateX(9px);
         -moz-transform: translateX(9px);
@@ -909,9 +927,15 @@ input[type="radio"]:checked+label {
 
 
 
-    #character-image {
+    #character-image,
+    #character-image img {
         max-width: 367px;
+
+    }
+
+    #character-image {
         margin-left: 40px;
+        will-change: transform, translateY;
         transform: translateY(-133px);
         -webkit-transform: translateY(-133px);
         -moz-transform: translateY(-133px);
@@ -919,11 +943,18 @@ input[type="radio"]:checked+label {
         -o-transform: translateY(-133px);
     }
 
+
+
     #home-next-buttons {
-        margin-top: -42px;
+        margin-top: 0;
         max-width: 400px;
         margin-left: 6px;
-
+        will-change: transform, translateY;
+        transform: translateY(-123px);
+        -webkit-transform: translateY(-123px);
+        -moz-transform: translateY(-123px);
+        -ms-transform: translateY(-123px);
+        -o-transform: translateY(-123px);
     }
 
     #play-again .btn {
@@ -975,6 +1006,7 @@ input[type="radio"]:checked+label {
         max-width: 1300px;
         height: 820px;
         margin: 0 auto;
+        will-change: transform, translateY;
         transform: translateY(-702px);
         -webkit-transform: translateY(-702px);
         -moz-transform: translateY(-702px);
