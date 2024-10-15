@@ -105,10 +105,12 @@ function startQuiz(){
 	if (  elementId('player-name').value === "" ) {
 		elementId('alert-name').classList.remove('hide');
 		elementId("start-game").disabled = true;
+		elementId('game-container').classList.add('hide')
 		const alertBoxClose = elementId('close-alert-btn');
 		alertBoxClose.addEventListener('click', ()=>{ 
 			elementId('alert-name').classList.add('hide');
 			elementId("start-game").disabled = false;
+			
 		});
 
 	} else {
