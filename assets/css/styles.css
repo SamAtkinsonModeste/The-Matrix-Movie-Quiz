@@ -250,11 +250,11 @@ ul {
     border-bottom: 20px solid transparent;
     border-left: 20px solid;
     border-top: 20px solid;
-    transform: translateY(-58px) translateX(-3px) rotate(225deg);
-    -webkit-transform: translateY(-58px) translateX(-3px) rotate(225deg);
-    -moz-transform: translateY(-58px) translateX(-3px) rotate(225deg);
-    -ms-transform: translateY(-58px) translateX(-3px) rotate(225deg);
-    -o-transform: translateY(-58px) translateX(-3px) rotate(225deg);
+    transform: translateY(-48px) translateX(-4px) rotate(225deg);
+    -webkit-transform: translateY(-48px) translateX(-4px) rotate(225deg);
+    -moz-transform: translateY(-48px) translateX(-4px) rotate(225deg);
+    -ms-transform: translateY(-48px) translateX(-4px) rotate(225deg);
+    -o-transform: translateY(-48px) translateX(-4px) rotate(225deg);
 }
 
 
@@ -812,6 +812,16 @@ input[type="radio"]:checked+label {
         font-size: 1.5rem;
         padding: 10px;
     }
+
+    /********Alert Name Input**********/
+    #arrow-down {
+        transform: translateY(-57px) translateX(-3px) rotate(225deg);
+        -webkit-transform: translateY(-57px) translateX(-3px) rotate(225deg);
+        -moz-transform: translateY(-57px) translateX(-3px) rotate(225deg);
+        -ms-transform: translateY(-57px) translateX(-3px) rotate(225deg);
+        -o-transform: translateY(-57px) translateX(-3px) rotate(225deg);
+    }
+
 
     /****Home or Play Agaian********/
     #overlayPlayAgain {
