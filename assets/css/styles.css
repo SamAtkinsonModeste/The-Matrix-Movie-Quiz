@@ -153,24 +153,28 @@ ul {
 
 
 #overlay-how-to-play {
-    height: 455px;
-    max-width: 650px;
+    height: fit-content;
+    max-width: 950px;
+
 }
 
 #how-to-play-head-list {
 
-    margin-top: 25%;
+    margin-top: 10px;
 
 }
 
 #how-to-play-ul {
     padding-left: 30px;
     font-size: 1rem;
-    line-height: 30px;
+    line-height: 25px;
+    margin-bottom: 0;
 }
 
+
+
 #how-to-play-ul li {
-    margin-top: 5px;
+    margin-top: 10px;
     margin-left: 20px;
 
 }
@@ -312,6 +316,11 @@ label[for="player-name"] {
 #overlay-how-to-play,
 #overlayPlayAgain {
     top: 100px;
+
+}
+
+#overlay-how-to-play {
+    top: 90px;
 
 }
 
@@ -715,13 +724,13 @@ input[type="radio"]:checked+label {
     }
 
     #overlay-how-to-play {
-        top: 150px;
+        top: 140px;
         left: 7%;
-        height: 600px;
+
     }
 
     #how-to-play-head-list {
-        margin-top: 10%;
+        margin-top: 10px;
     }
 
     #how-to-title {
@@ -737,8 +746,15 @@ input[type="radio"]:checked+label {
 
 
     #how-to-play-ul li {
-        margin-top: 45px;
+        margin-top: 25px;
         margin-left: 20px;
+    }
+
+    #end-how-to-play {
+        font-size: 1.3rem;
+        line-height: 40px;
+        width: 98%;
+
     }
 
 
@@ -777,7 +793,7 @@ input[type="radio"]:checked+label {
     /**HOW TO PLAY**/
     #overlay-how-to-play {
         top: 50px;
-        left: 18%;
+        left: 3%;
     }
 
     #how-to-title {
@@ -785,8 +801,8 @@ input[type="radio"]:checked+label {
     }
 
     #how-to-play-ul {
-        font-size: 1.8rem;
-        line-height: 45px;
+        font-size: 1.6rem;
+        line-height: 35px;
         margin-left: 20px;
     }
 
@@ -920,12 +936,18 @@ input[type="radio"]:checked+label {
     }
 
     #overlay-how-to-play {
-        max-width: 800px;
-        height: 700px;
+        max-width: 1300px;
+        height: 820px;
         margin: 0 auto;
-        margin-top: -700px;
+        transform: translateY(-702px);
+        -webkit-transform: translateY(-702px);
+        -moz-transform: translateY(-702px);
+        -ms-transform: translateY(-702px);
+        -o-transform: translateY(-702px);
+    }
 
-
+    #end-how-to-play {
+        width: 100%;
     }
 
     #users-score {
