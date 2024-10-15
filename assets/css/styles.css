@@ -263,6 +263,7 @@ ul {
 
 input[type="text"] {
     border: 1px solid var(--accent);
+    cursor: pointer;
     box-shadow: inset 0 0 13px 1px var(--black);
     outline: none;
     transition: border, 0.5s ease;
@@ -288,6 +289,7 @@ input[type="text"],
 
 label[for="player-name"] {
     font-size: 1.4em;
+    cursor: pointer;
 }
 
 
@@ -419,7 +421,7 @@ label[for="player-name"] {
 }
 
 #character-image {
-    width: 53%;
+    max-width: 162px;
     height: 170px;
     margin-top: 83px;
     padding-top: 3px;
@@ -452,6 +454,7 @@ label[for="player-name"] {
 
 #answer-options ul li {
     margin: 8px 0;
+    cursor: pointer;
 
 }
 
@@ -462,6 +465,7 @@ input[type="radio"] {
 
 input[type="radio"]+label,
 #play-again .btn {
+    cursor: pointer;
     width: 90%;
     display: block;
     margin: 0 auto;
@@ -651,14 +655,14 @@ input[type="radio"]:checked+label {
 
     #question {
         font-size: 1.4rem;
+
     }
 
 
     #character-image {
         height: 0;
         margin-top: 0;
-        width: 50%;
-        max-width: 500px;
+        max-width: 359px;
     }
 
     #answer-options {
@@ -841,6 +845,8 @@ input[type="radio"]:checked+label {
     }
 
     #matrix-quiz {
+        position: relative;
+        z-index: 10;
         margin-top: -14px;
         margin-bottom: 0;
 
@@ -852,14 +858,26 @@ input[type="radio"]:checked+label {
 
     }
 
-    .poster-questions {
-        max-width: 468px;
+    #question {
+        transform: translateY(-140px);
+        -webkit-transform: translateY(-140px);
+        -moz-transform: translateY(-140px);
+        -ms-transform: translateY(-140px);
+        -o-transform: translateY(-140px);
+    }
 
+    .poster-questions {
+        max-width: 600px;
+        transform: translate(-21px, -71px);
+        -webkit-transform: translate(-21px, -71px);
+        -moz-transform: translate(-21px, -71px);
+        -ms-transform: translate(-21px, -71px);
+        -o-transform: translate(-21px, -71px);
     }
 
     .img-underline-game {
-        left: 18px;
-        bottom: -19px;
+        left: 25px;
+        bottom: -94px;
     }
 
 
@@ -876,7 +894,11 @@ input[type="radio"]:checked+label {
 
     #answer-options ul {
         margin: 0;
-
+        transform: translateX(9px);
+        -webkit-transform: translateX(9px);
+        -moz-transform: translateX(9px);
+        -ms-transform: translateX(9px);
+        -o-transform: translateX(9px);
     }
 
 
@@ -888,9 +910,13 @@ input[type="radio"]:checked+label {
 
 
     #character-image {
-        max-width: 240px;
-        margin-left: 88px;
-
+        max-width: 367px;
+        margin-left: 40px;
+        transform: translateY(-133px);
+        -webkit-transform: translateY(-133px);
+        -moz-transform: translateY(-133px);
+        -ms-transform: translateY(-133px);
+        -o-transform: translateY(-133px);
     }
 
     #home-next-buttons {
