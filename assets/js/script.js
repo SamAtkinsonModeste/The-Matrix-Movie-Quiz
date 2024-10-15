@@ -105,21 +105,28 @@ function startQuiz(){
 	if (  elementId('player-name').value === "" ) {
 		elementId('alert-name').classList.remove('hide');
 		elementId("start-game").disabled = true;
-		elementId('game-container').classList.add('hide')
+		elementId('game-container').classList.add('hide');
+
+		if (elementId("start-game").disabled == true) {
+			elementId('game-container').classList.add('hide');
+		}
 		const alertBoxClose = elementId('close-alert-btn');
 		alertBoxClose.addEventListener('click', ()=>{ 
 			elementId('alert-name').classList.add('hide');
 			elementId("start-game").disabled = false;
+			elementId('game-container').classList.add('hide');
 			
 		});
 
 	} else {
 		if (  elementId('player-name').value !== "" ) {
 			playersName = elementId('player-name').value 
-			document.getElementById( 'game-container' ).classList.remove( 'hide' );
-			document.getElementById( 'entry-controls-container' ).classList.add( 'hide' );
+			elementId( 'game-container' ).classList.remove( 'hide' );
+			elementId( 'entry-controls-container' ).classList.add( 'hide' );
 		}
 	}
+
+
  
   randomCharacter = randomArray(matrixCharacters);
   currentQuestionIndex = 0;
