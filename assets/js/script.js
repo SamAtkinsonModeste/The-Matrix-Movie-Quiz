@@ -40,6 +40,7 @@ document.addEventListener( "DOMContentLoaded", () => {
 	});
 
 	elementId("start-again").addEventListener('click', playAgain );
+	elementId("homeBtn").addEventListener('click', exitGame );
 	
 	
 });
