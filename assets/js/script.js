@@ -145,10 +145,11 @@ function startQuiz(){
  * with the function catch the answers function as it's function.
  */
 function setNextCharacter(){
-	
+ resetButton();	
  displayCharacterOptions(randomCharacter[currentQuestionIndex]);
  let selectedRadio = null;
  const radioBtns = document.querySelectorAll('input[name="character"]');
+ 
 
  for (const radio of radioBtns) {
 	radio.addEventListener('change', (event) => {
@@ -164,7 +165,18 @@ function setNextCharacter(){
 	});
   
 }
+
 optionsContainer.addEventListener( 'click', catchAnswers );
+}
+
+
+/**
+ * toggles nextBtn hide class on
+ * after it is clicked for the next question
+ */
+function resetButton() {
+	const nextBtn = document.getElementById( 'nextBtn' );
+	nextBtn.classList.add( 'hide' );
 }
 
 
