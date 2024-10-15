@@ -97,9 +97,10 @@
                 <h2 class="align-center" id="how-to-title">How To Play</h2>
                 <ol id="how-to-play-ul">
                     <li>Enter your Name</li>
-                    <li>Choose your difficulty</li>
-                    <li>You need to score 50% or more to move to the next level.</li>
-                    <li>The succes of your completed levels will be displayed.</li>
+                    <li>You have 25 characters to name</li>
+                    <li>You have to select the correct name from 5 buttons.</li>
+                    <li>Once you click a button all buttons become inactive.</li>
+                    <li>Each correct answer scores you 10 points.</li>
                 </ol>
             </div>
         </div>
@@ -111,19 +112,20 @@
 
             <!-- SCORE CONGRATS MESSAGE   -->
             <div id="player-score" class="hide">
-                <p class="align-center" id="congratsText">Congratulations <span id="players-name"></span>!<br> Your
-                    score is:<span id="user-score"> </span><br>
+                <p class="align-center" id="congratsText">Congratulations <span id="players-name"
+                        class="red-pill-two"></span>!<br> Your
+                    score is:<span id="user-score" class="blue-pill"> </span><br>
                     Do you think you could improve on your score?</p>
                 <!-- Displays the correct characters-->
                 <div id="charactersKnown" class="hide">
-                    <h2 id="characters-known" class="align-center">Characters you got correct <span
-                            id="correct-players"></span>!</h2>
+                    <h2 id="characters-known" class="align-center">Characters you got correct <span id="correct-players"
+                            class="red-pill"></span>!</h2>
                     <ul id="knownUl"></ul>
                 </div>
                 <!-- Displays the characters not guessed correctly-->
                 <div id="charactersUnknown" class="hide">
                     <h2 id="characters-unknown" class="align-center">Characters you got incorrect <span
-                            id="incorrect-player"></span>.</h2>
+                            id="incorrect-player" class="blue-pill"></span>.</h2>
                     <ul id="unknownUl"></ul>
                 </div>
             </div>

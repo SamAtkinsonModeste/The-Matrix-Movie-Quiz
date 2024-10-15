@@ -50,6 +50,7 @@ button,
 input {
     display: block;
     font-weight: bold;
+    cursor: pointer;
     padding: 0.600rem 0.750rem 0.450rem;
     border-radius: 24px;
     -webkit-border-radius: 24px;
@@ -523,9 +524,6 @@ input[type="radio"]:checked+label {
 }
 
 
-#characters-unknown {
-    font-size: 0.850rem;
-}
 
 #knownUl,
 #unknownUl {
