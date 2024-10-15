@@ -394,6 +394,10 @@ label[for="player-name"] {
     -o-border-radius: 20px;
 }
 
+#poster-question {
+    max-width: 300px;
+}
+
 #questions-underline {
     background: linear-gradient(var(--black), #3f0359);
 }
@@ -404,11 +408,14 @@ label[for="player-name"] {
     color: #3f0359;
 }
 
+
+
 #question {
     font-weight: bold;
     font-size: 0.8rem;
     padding-left: 5px;
     color: #3f0359;
+    text-align: center;
     margin: 0;
 }
 
@@ -608,7 +615,7 @@ input[type="radio"]:checked+label {
     /****OVERLAY HOME***********/
     #movie-poster,
     #quiz-poster,
-    .poster-questions {
+    #poster-questions {
         width: 600px;
         margin: 0 auto;
     }
@@ -647,6 +654,7 @@ input[type="radio"]:checked+label {
 
     #game-container {
         max-width: 723px;
+        margin-top: 75px;
     }
 
     #matrix-quiz {
@@ -654,7 +662,7 @@ input[type="radio"]:checked+label {
         margin: 0;
     }
 
-    .poster-questions {
+    #poster-questions {
         margin: 0;
         margin-left: auto;
     }
@@ -852,8 +860,8 @@ input[type="radio"]:checked+label {
     /**********Game Container**********************/
     #game-container {
 
-        margin: 40px auto;
-        max-height: 760px;
+        margin: 50px auto 0;
+        height: 660px;
         max-width: 960px;
 
     }
@@ -866,95 +874,77 @@ input[type="radio"]:checked+label {
 
     }
 
-    #question-numbers,
-    .poster-questions {
-        max-height: 250px;
+    #questions-numbers {
+        display: flex;
+        margin-top: -30px
+    }
 
+    #questions-numbers,
+    #poster-questions {
+        height: 250px;
     }
 
     #question {
-        will-change: transform, translateY;
-        transform: translateY(-140px);
-        -webkit-transform: translateY(-140px);
-        -moz-transform: translateY(-140px);
-        -ms-transform: translateY(-140px);
-        -o-transform: translateY(-140px);
+        width: 50%;
+        align-self: flex-end;
     }
 
-    .poster-questions {
-        max-width: 600px;
-        will-change: transform, translate;
-        transform: translate(-21px, -71px);
-        -webkit-transform: translate(-21px, -71px);
-        -moz-transform: translate(-21px, -71px);
-        -ms-transform: translate(-21px, -71px);
-        -o-transform: translate(-21px, -71px);
+    #poster-questions {
+        max-width: 250px;
+        order: 1;
     }
 
     .img-underline-game {
-        left: 119px;
-        bottom: -94px;
-        width: 80%;
+        left: -131px;
+        bottom: 19px;
+        width: 150%;
     }
 
 
     #answers {
-        /* border: solid 2px greenyellow; */
-        max-height: 300px;
+        height: 300px;
+        margin-top: -10px;
         justify-content: space-between;
     }
 
     #answer-options {
-        /* border: solid rgb(212, 14, 226) 1px; */
         max-width: 950px;
     }
 
     #answer-options ul {
-        margin: 0;
-        will-change: transform, translateX;
-        transform: translateX(9px);
-        -webkit-transform: translateX(9px);
-        -moz-transform: translateX(9px);
-        -ms-transform: translateX(9px);
-        -o-transform: translateX(9px);
+        margin: 26px 0 0;
     }
 
 
     #answer-options ul li {
         margin: 2px 0;
-
     }
 
 
 
+    input[type="radio"]+label {
+        font-size: 1.2rem;
+    }
+
+    #character-image {
+        margin-top: 10px
+    }
+
     #character-image,
     #character-image img {
-        max-width: 367px;
+        max-width: 270px;
 
     }
 
     #character-image {
-        margin-left: 40px;
-        will-change: transform, translateY;
-        transform: translateY(-133px);
-        -webkit-transform: translateY(-133px);
-        -moz-transform: translateY(-133px);
-        -ms-transform: translateY(-133px);
-        -o-transform: translateY(-133px);
+        margin-left: 84px;
     }
 
 
 
     #home-next-buttons {
-        margin-top: 0;
         max-width: 400px;
-        margin-left: 6px;
-        will-change: transform, translateY;
-        transform: translateY(-123px);
-        -webkit-transform: translateY(-123px);
-        -moz-transform: translateY(-123px);
-        -ms-transform: translateY(-123px);
-        -o-transform: translateY(-123px);
+        margin-left: 12px;
     }
 
     #play-again .btn {
@@ -990,9 +980,46 @@ input[type="radio"]:checked+label {
     /****GAME CONTAINER AND NESTED ELEMENTS*********/
     #game-container {
         max-width: 1200px;
-        max-height: 820px;
+        height: 810px;
         margin-left: 0;
-        margin: 50px auto;
+        margin: 20px auto 10px;
+    }
+
+    #questions-numbers {
+        height: 360px;
+    }
+
+    #poster-questions {
+        max-width: 370px
+    }
+
+    #questions-underline {
+        left: -187px;
+        bottom: -90px;
+    }
+
+    #question {
+        font-size: 1.7rem;
+    }
+
+    input[type="radio"]+label {
+        font-size: 1.5rem;
+    }
+
+
+    #character-image {
+        margin-left: 100px;
+    }
+
+    #character-image,
+    #character-image img {
+        max-width: 320px;
+    }
+
+
+    #home-next-buttons {
+        margin-top: 50px;
+        margin-left: 51px;
     }
 
     /***USERS SCORE OVERLAY********/
