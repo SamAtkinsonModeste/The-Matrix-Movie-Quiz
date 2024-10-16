@@ -35,18 +35,9 @@ website was greated for fans of the Matrix movies. Here is where you can test yo
     - [Overlay Score Display](#overlay-score-display)
     - [How to Play Overlay](#how-to-play-overlay)
     - [Overlay Play Again](#overlay-play-again)
-    - [Explore Escape](#explore-escape)
-    - [Treatments Experts](#treatments-experts)
-  - [Treatment Page](#treatment-page)
-    - [Treatment Introduction](#treatment-introduction)
-    - [Body Massages](#body-massages)
-    - [Facial Massages](#facial-massages)
-  - [Booking Page](#booking-page)
-    - [Thank You For Booking Page](#thank-you-for-booking-page)
-    - [Thank You For Booking Page More](#thank-you-for-booking-page-more)
-  - [Footer](#footer)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
+    - [Platforms](#platforms)
     - [Other Tools](#other-tools)
   - [Testing](#testing)
     - [Methods](#methods)
@@ -292,20 +283,175 @@ At the conclusion of the Matrix quiz, players are presented with a "Play Again o
 
 ## Languages
 
-- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-  - Page Structure
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [HTML](w3.org/standards/webdesign/htmlcss)
+    * Page markup.
+- [CSS](w3.org/standards/webdesign/htmlcss)
+    * Styling.
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+    * Running functions for interactive components.
 
-  - Page Styling
+    ## Platforms
+- [Github](https://github.com/)
+    * Storing code remotely and deployment.
 
   ## Other Tools
+- [Adobe XD](https://adobe-xd.en.softonic.com/)
+     * To create the High Fidelity mock-ups.
+- [Favicon](https://www.favicon-generator.org/)
+    * Creates multiple favicons from a single image to cater to diverse browsers and devices.
 
-  -
+
 
   # Testing
 
-  # Methods
+  ## Methods
 
-  ## Validation
+  ### Validation
 
- 
+   - All HTML files validated with [W3C Markup Validation Service](https://validator.w3.org/)
+
+    - <div align="center">
+        <img src="assets/images/html-valadated.png"  alt="Image of HTML pages validation results">
+      </div>
+
+- Stylesheet validated with [W3C CSS Validation Service](https://validator.w3.org/)
+
+   <div align="center">
+      <img src="assets/images/css-validation.png"  alt="Image of CSS validation results of a style sheet">
+    </div>
+  - Javascript file was tested on the site for errors and functionality using the console and with [JSHint](https://jshint.com/).
+
+     <div align="center">
+      <img src="assets/images/JS-HINT.png"  alt="Image of JS Hint results of a javascript file">
+     </div>
+
+
+    ### Accessibility
+    To ensure that the Matrix quiz web page is accessible to all users, including those with disabilities, I utilized the following tools:
+1. WAVE (Web Accessibility Evaluation Tool):
+WAVE was used to evaluate the accessibility of the web page by identifying issues related to:
+
+   - Contrast errors
+   - Missing alternative text for images
+   - Structural elements, such as headings and labels
+   - ARIA (Accessible Rich Internet Applications) support
+
+By running the page through WAVE, I was able to detect and address these issues to improve the overall accessibility of the site.
+
+  <div align="center">
+      <img src="assets/images/wave-redame.png"  alt="Results from using WAVE for accessibilty">
+  </div>
+
+
+2. Chrome Lighthouse:
+Chrome Lighthouse was used to further audit the web page's accessibility. Lighthouse provided insights and scores based on the following criteria:
+
+- Text legibility and color contrast ratios
+- Proper use of semantic HTML elements
+- Accessible navigation and focus management
+- Support for screen readers and keyboard navigation
+
+Lighthouse's automated testing helped ensure that the web page follows best practices for accessibility, providing a more inclusive experience for all users.
+
+ <div align="center">
+      <img src="assets/images/lighthouse-title.png"  alt="Lighthose address of site">
+  </div>
+
+  #### Mobile
+
+  <div align="center">
+      <img src="assets/images/lighthouse-mobile.png"  alt="Results from using WAVE for accessibilty">
+  </div>
+
+   #### Desktop
+
+  <div align="center">
+      <img src="assets/images/lighthouse-desktop.png"  alt="Results from using WAVE for accessibilty">
+  </div>
+
+
+  ### Mobile Testing
+  - I tested the site personally on my iPhone device, and played through the game twice.
+- The site was sent to friends for them to play. They have tested on their devices, including Andriod.
+- Chrome was utilised to inspect the site in mobile format, playing through the quiz.
+
+### Desktop Testing
+#### PC
+- The site was tested on a PC running Windows using the latest version of Google Chrome.
+- Also on a PC running Windows the latest version of FireFox Nightly.
+- As well on a PC running Windows the latest version of Microsoft Edge
+
+All to ensure cross-browser compatibility.
+
+### Mac Laptop
+-  The site was also tested on a Mac laptop, in Chrome.
+
+# Bugs
+
+### Known Bugs
+- Glitch with the container for the image of the characters when the next question is loaded.
+- When the pop-up alert appears when a user hasn't input a name the input is not disabled
+- Results page is slight off center.
+
+### Fixed Bugs
+
+- Player was able to click on all the inputs, which would duplicate the images on the results page.
+  -  Fixed by creating nested for loops to disable all inputs once one was clicked.
+- When the alert pop-up alert user to input a name when the alert close button was clicked the quiz container class hidden would be removed as if the start button had been clicked. 
+   - Fixed by creating an event listner on the closing alert button and disabling the start button.
+- Each character image was only being pushed to the correct image array and not the incorrect image array. So the results page would display the same images for correct and incorrect.
+  - Fixed by creating a function that takes an array and pushes items to the array given as the argument.
+
+  # Deployment
+
+  ### Github Deployment
+  - Anyone can clone and download the quiz.
+  **Requirements are:**
+  - A Email Account
+  - A free GitHub account
+
+### Github Instructions
+1. Log in to your GitHub account.
+navigate to [https://github.com/SamAtkinsonModeste/The-Matrix-Movie-Quiz](https://github.com/SamAtkinsonModeste/The-Matrix-Movie-Quiz).
+1. You can set up your own repository and copy or clone it, or you fork the repository.
+2. `git add`, `git commit` and `git push` to a GitHub repository, if necessary.
+3. GitHub pages will update from the master branch by default.
+4. Go to the **Settings** page of the repository.
+5. Scroll down to the **Github Pages** section.
+7. Select the Master Branch as the source and **Confirm** the selection.
+8. Wait a minute or two and it should be live for viewing
+
+## Credits
+
+### Tutorial
+#### JavaScript
+I referenced an excellent tutorial by Kyle Cook from Web Dev Simplified [Kyle Cook's Build A Quiz With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k), which provided a clear introduction to creating an interactive quiz using JavaScript.<br>
+I used Kyle Cook's tutorial as the starting point for my project, basing my initial programming on his simple demo. From there, I expanded upon the demo by:
+
+- Adding more advanced functionality, such as overlays for displaying "How to Play" instructions, score summaries, and replay options.
+- Personalizing the quiz by dynamically inserting the player's name and feedback based on their answers.
+- Incorporating visual feedback through character images for correct and incorrect answers.
+- Enhancing the user experience with additional features, responsiveness, and customized pop-ups.
+
+Kyle's tutorial provided a strong foundation that allowed me to build upon and create a more complex, engaging, and interactive quiz.
+
+### Text Content
+- As someone who struggles with dyslexia, I relied on [Grammarly](https://app.grammarly.com/) for grammar and spelling support. Their AI also helped me enhance the overall wording of some of my text.
+
+For additional text content in my Matrix quiz game, I utilized [ChatGPT](https://chatgpt.com/), an AI language model developed by OpenAI. ChatGPT assisted me in crafting various aspects of the quiz, including:
+
+- The "How to Play" instructions that guide users through the game mechanics.
+- The personalized congratulations messages displayed at the end of the quiz.
+
+Using this approach allowed me to focus more on the technical and interactive aspects of the project while ensuring the text content was both polished and cohesive.
+
+## Author
+
+- Twitter - [@sammodeste1](https://www.twitter.com/@sammodeste1)
+- LinkedIn - [Sam-Atkinson-Modeste](www.linkedin.com/in/sam-atkinson-modeste)
+- GitHub - [SamAtkinsonModeste](https://www.github.com/SamAtkinsonModeste)
+
+.
+
+
+
