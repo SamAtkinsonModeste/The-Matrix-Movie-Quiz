@@ -19,7 +19,7 @@ website was greated for fans of the Matrix movies. Here is where you can test yo
 # UX
 
 - [Goals](#goals)
-   - [Users Story](#user-story)
+   - [Users Story](#users-story)
    - [Vistor Goals](#vistor-goals)
   
 - [Visual Design](#visual-design)
@@ -185,27 +185,32 @@ The following colors have been incorporated throughout the app to create contras
 
 
 ### Game Introduction Page
+The Matrix Quiz begins by immersing mentioning the three key characters.<br> A brief explanation follows, informing the user that they are about to embark on a quiz adventure.<br> Using the iconic choice from the Matrix, the user is asked if they are ready to take the _blue or red pill_.<br> If the user decides to take the pill they can proceed down the rabbit hole by clicking the Let's Begin button which takes them to the game entry point.
+
 <div align="center">
   <img src="assets/images/feat-1.png" alt="Matrix poster intor text>
 </div>
 
-The Matrix Quiz begins by immersing mentioning the three key characters.<br> A brief explanation follows, informing the user that they are about to embark on a quiz adventure.<br> Using the iconic choice from the Matrix, the user is asked if they are ready to take the _blue or red pill_.<br> If the user decides to take the pill they can proceed down the rabbit hole by clicking the Let's Begin button which takes them to the game entry point. 
-
 
 
 ### Game Entry
+At the entry point of the Matrix Quiz, players are presented with two buttons and an input field. <br>The input field is used to enter the player's name, which is required to start the quiz.<br>
+
+
 <div align="center">
   <img src="assets/images/feat-2.png" alt="buttons to use for entry to Matrix game>
 </div>
 
-At the entry point of the Matrix Quiz, players are presented with two buttons and an input field. <br>The input field is used to enter the player's name, which is required to start the quiz.<br>
+### Alert
 If a player clicks the **Start Quiz** button without typing their name.<br>
 A pop-up alert box pops up.
+
 <div align="center">
   <img src="assets/images/alert-popup.png" alt="Alert pop-up when a user hasn't input their name.>
 </div>
 
 
+### How To Play
 The _How To Play_  button opens an overlay with detailed instructions on how to play the game, along with the rules.
 The _Start Quiz_ button is used to start the quiz. However, if the player has not entered their name, a pop-up alert will inform them that the name is required, and the quiz will not begin until the name is provided.
 
