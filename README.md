@@ -28,12 +28,13 @@ website was greated for fans of the Matrix movies. Here is where you can test yo
   - [Colour Palette](#colour-palette)
   - [Styling](#styling)
 - [Features](#features)
-  - [Game Introduction Page](#game-introduction-page)
+   - [Game Introduction Page](#game-introduction-page)
     - [Game Entry](#game-entry)
     - [Game Buttons](#game-buttons)
-  - [Home Page](#home-page)
-    - [Home Welcome Section](#home-welcome-section)
-    - [Unwind Tranquillity](#unwind-tranquillity)
+- [Overlays](#overlays)
+    - [Overlay Score Display](#overlay-score-display)
+    - [How to Play Overlay](#how-to-play-overlay)
+    - [Overlay Play Again](#overlay-play-again)
     - [Explore Escape](#explore-escape)
     - [Treatments Experts](#treatments-experts)
   - [Treatment Page](#treatment-page)
@@ -98,7 +99,7 @@ User Goals are:
 ## Fonts
 The design of the Matrix Quiz app makes use of two distinct fonts to enhance the visual style and user experience:
 
-## Matrix Font
+### Matrix Font
 <div align="center">
   <img src="assets/images/matrix-font.png" alt="Demo of the Matrix font">
 </div>
@@ -109,7 +110,7 @@ The design of the Matrix Quiz app makes use of two distinct fonts to enhance the
 -  **Design:** The Matrix font replicates the iconic aesthetic seen in the Matrix movie series, contributing to the overall atmosphere of the app and aligning it with the visual elements from the films.
 - **Usage:** All headings and the main title on the landing page are rendered in the Matrix font to ensure users immediately recognize the theme.
 
-## Firo Code Font
+### Firo Code Font
 <div align="center">
   <img src="assets/images/firo-code-font.png" alt="Demo of the Firo font">
 </div>
@@ -192,7 +193,7 @@ The following colors have been incorporated throughout the app to create contras
 # Features
 
 
-## Game Introduction Page
+### Game Introduction Page
 <div align="center">
   <img src="assets/images/feat-1.png" alt="Matrix poster intor text>
 </div>
@@ -201,7 +202,7 @@ The Matrix Quiz begins by immersing mentioning the three key characters.<br> A b
 
 
 
-## Game Entry
+### Game Entry
 <div align="center">
   <img src="assets/images/feat-2.png" alt="buttons to use for entry to Matrix game>
 </div>
@@ -252,12 +253,36 @@ These buttons provide a simple and engaging way to navigate through the quiz.
 
 
 
-## Tablet Desktop Navigation
+## Overlays
 
+### Overlay Score Display
 
-# Home Page
+At the end of the Matrix quiz, an overlay is displayed showing the player's final score. This overlay provides a clear summary of the quiz results with the following elements:
+- **Personalized Congratulations Message:**
+The overlay greets the player with a customized congratulations message that includes their name, which was entered at the start of the quiz. For example, _"Congratulations, [Player's Name]!"_ is dynamically displayed to make the score page feel more engaging and personalized.
+- **Score Summary:**
+The player's final score is displayed, showing how many characters they identified correctly.
+- **Correct Character Images:**
+The overlay displays the images of the characters the player guessed correctly. 
+- **Incorrect Character Images:**
+For any questions the player answered incorrectly, the overlay shows the images of the incorrect characters. 
 
-## Home Welcome Section
+<div align="center">
+  <img src="assets/images/results-page-readme.png" alt="overlay of players score and images of correct and incorrect gues images">
+</div>
+
+### How to Play Overlay
+The "How to Play" overlay provides players with clear instructions and rules before they begin the Matrix quiz.<br> This overlay ensures that users understand how the game works and sets expectations for the gameplay.
+<div align="center">
+  <img src="assets/images/how-to-play-readme.png" alt="overlay of instructions how to play the matrix quiz">
+</div>
+
+### Overlay Play Again
+At the conclusion of the Matrix quiz, players are presented with a "Play Again or Exit Game" overlay that offers a simple and intuitive choice for what they’d like to do next. This overlay enhances the user experience by providing clear options for continuing or ending their game session.
+
+<div align="center">
+  <img src="assets/images/play-again-readme.png" alt="overlay of instructions how to play the matrix quiz">
+</div>
 
 
 
