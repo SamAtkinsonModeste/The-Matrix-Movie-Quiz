@@ -1035,12 +1035,6 @@ input[type="radio"]:checked+label {
         max-width: 1300px;
         height: 820px;
         margin: 0 auto;
-        will-change: transform, translateY;
-        transform: translateY(-702px);
-        -webkit-transform: translateY(-702px);
-        -moz-transform: translateY(-702px);
-        -ms-transform: translateY(-702px);
-        -o-transform: translateY(-702px);
     }
 
     #end-how-to-play {
