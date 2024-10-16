@@ -28,9 +28,9 @@ website was greated for fans of the Matrix movies. Here is where you can test yo
   - [Colour Palette](#colour-palette)
   - [Styling](#styling)
 - [Features](#features)
-  - [Navigation Bars](#navigation-bars)
-    - [Mobile Navigation](#mobile-navigation)
-    - [Tablet Desktop Navigation](#tablet-desktop-navigation)
+  - [Game Introduction Page](#game-introduction-page)
+    - [Game Entry](#game-entry)
+    - [Game Buttons](#game-buttons)
   - [Home Page](#home-page)
     - [Home Welcome Section](#home-welcome-section)
     - [Unwind Tranquillity](#unwind-tranquillity)
@@ -92,7 +92,7 @@ User Goals are:
 ## High Fidelity Mockup
 
 <div align="center">
-  <img src="assets/images/hi-fidel.png" style="background-color:black" alt="Home, Treatment and Booking mobile pages mockups">
+  <img src="assets/images/mobile-mock-up.png" style="background-color:black" alt="mobile mockup of the matrix quiz">
 </div>
 
 ## Fonts
@@ -193,14 +193,33 @@ The following colors have been incorporated throughout the app to create contras
 
 
 ## Game Introduction Page
+<div align="center">
+  <img src="assets/images/feat-1.png" alt="Matrix poster intor text>
+</div>
+
 The Matrix Quiz begins by immersing mentioning the three key characters.<br> A brief explanation follows, informing the user that they are about to embark on a quiz adventure.<br> Using the iconic choice from the Matrix, the user is asked if they are ready to take the _blue or red pill_.<br> If the user decides to take the pill they can proceed down the rabbit hole by clicking the Let's Begin button which takes them to the game entry point. 
 
 
+
 ## Game Entry
-At the entry point of the Matrix Quiz, players are presented with two buttons and an input field. <br>The input field is used to enter the player's name, which is required to start the quiz.
+<div align="center">
+  <img src="assets/images/feat-2.png" alt="buttons to use for entry to Matrix game>
+</div>
+
+At the entry point of the Matrix Quiz, players are presented with two buttons and an input field. <br>The input field is used to enter the player's name, which is required to start the quiz.<br>
+If a player clicks the **Start Quiz** button without typing their name.<br>
+A pop-up alert box pops up.
+<div align="center">
+  <img src="assets/images/alert-popup.png" alt="Alert pop-up when a user hasn't input their name.>
+</div>
+
 
 The _How To Play_  button opens an overlay with detailed instructions on how to play the game, along with the rules.
 The _Start Quiz_ button is used to start the quiz. However, if the player has not entered their name, a pop-up alert will inform them that the name is required, and the quiz will not begin until the name is provided.
+
+<div align="center">
+  <img src="assets/images/how-to-play-readme.png" alt="an overlay with the rules of the matrix game">
+</div>
 
 ## Game Buttons
 In the Matrix Quiz, users interact with several buttons to navigate and complete the quiz:
@@ -208,14 +227,26 @@ In the Matrix Quiz, users interact with several buttons to navigate and complete
 - **Five character named buttons:**
   -  These buttons display different character names, and the user selects one to guess the correct name of the character shown in the image. When a button is selected, it changes colour to indicate the user's choice.
 
+  <div align="center">
+  <img src="assets/images/option-btns-readme.png" alt="Game buttons with characters names.">
+</div>
+
 - **Home button:**
   -  This button allows the user to return to the game entry point, where they can restart or adjust their setup.
+
+  <div align="center">
+  <img src="assets/images/game-buttons-readme.png" alt="Home and Next buttons">
+</div>
 
 - **Next button:**
   - After choosing a character name, clicking the Next button will take the user to the next question in the quiz.
 
 - **Submit button:** 
   -  Once all questions have been answered, a Submit button appears, allowing the user to submit their answers for final evaluation.
+
+  <div align="center">
+  <img src="assets/images/end-game-btns-readme.png" alt="home and submit buttons">
+</div>
 
 These buttons provide a simple and engaging way to navigate through the quiz.
 
