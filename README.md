@@ -327,7 +327,7 @@ At the conclusion of the Matrix quiz, players are presented with a "Play Again o
 
    - All HTML files validated with [W3C Markup Validation Service](https://validator.w3.org/)
 
-    - <div align="center">
+     <div align="center">
         <img src="assets/images/html-valadated.png"  alt="Image of HTML pages validation results">
       </div>
 
@@ -336,10 +336,11 @@ At the conclusion of the Matrix quiz, players are presented with a "Play Again o
    <div align="center">
       <img src="assets/images/css-validation.png"  alt="Image of CSS validation results of a style sheet">
     </div>
+    
   - Javascript file was tested on the site for errors and functionality using the console and with [JSHint](https://jshint.com/).
 
      <div align="center">
-      <img src="assets/images/JS-HINT.png"  alt="Image of JS Hint results of a javascript file">
+      <img src="assets/images/js-hint.png"  alt="Image of JS Hint results of a javascript file">
      </div>
 
 
