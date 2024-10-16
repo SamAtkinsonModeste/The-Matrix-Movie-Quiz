@@ -15,43 +15,60 @@ website was greated for fans of the Matrix movies. Here is where you can test yo
 
 
 ## Table of Contents
-
-# UX
+<details>
+<summary>UX</summary>
 
 - [Goals](#goals)
    - [Users Story](#users-story)
    - [Vistor Goals](#vistor-goals)
-  
-- [Visual Design](#visual-design)
+ </details> 
+
+ <details>
+<summary>Visual Design</summary>
   - [High Fidelity Mockup](#high-fidelity-mockup)
   - [Fonts](#fonts)
   - [Colour Palette](#colour-palette)
   - [Styling](#styling)
-- [Features](#features)
+  </details>
+  <details>
+<summary>Features</summary>
    - [Game Introduction Page](#game-introduction-page)
     - [Game Entry](#game-entry)
+    - [Alert](#alert)
     - [Game Buttons](#game-buttons)
 - [Overlays](#overlays)
     - [Overlay Score Display](#overlay-score-display)
     - [How to Play Overlay](#how-to-play-overlay)
     - [Overlay Play Again](#overlay-play-again)
-  - [Technologies Used](#technologies-used)
+    </details>
+    <details>
+  <summary>Technologies Used</summary>
     - [Languages](#languages)
     - [Platforms](#platforms)
     - [Other Tools](#other-tools)
-  - [Testing](#testing)
+    </details>
+    <details>
+  <summary>Testing</summary>
     - [Methods](#methods)
       - [Validation](#validation)
       - [Accessibility](#accessibility)
       - [Mobile Testing](#mobile-testing)
       - [Desktop Testing](#desktop-testing)
-  - [Bugs](#bugs)
+      </details>
+      <details>
+ <summary>Bugs</summary>
     - [Known Bugs](#known-bugs)
     - [Fixed Bugs](#fixed-bugs)
-- [Deployment](#deployment)
+    </details>
+    <details>
+<summary>Deployment</summary>
   - [Github Deployment](#github-deployment)
+  </details>
+  <details>
+  <summary>Credits & Author</summary>
 - [Credits](#credits)
 - [Author](#author)
+</details>
 
 ## Goals
 ### Users Story:
@@ -211,13 +228,7 @@ A pop-up alert box pops up.
 </div>
 
 
-### How To Play
-The _How To Play_  button opens an overlay with detailed instructions on how to play the game, along with the rules.
-The _Start Quiz_ button is used to start the quiz. However, if the player has not entered their name, a pop-up alert will inform them that the name is required, and the quiz will not begin until the name is provided.
 
-<div align="center">
-  <img src="assets/images/how-to-play-readme.png" alt="an overlay with the rules of the matrix game">
-</div>
 
 ## Game Buttons
 In the Matrix Quiz, users interact with several buttons to navigate and complete the quiz:
