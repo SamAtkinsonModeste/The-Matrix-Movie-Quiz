@@ -196,10 +196,11 @@ The Matrix Quiz begins by immersing mentioning the three key characters.<br> A b
 ### Game Entry
 At the entry point of the Matrix Quiz, players are presented with two buttons and an input field. <br>The input field is used to enter the player's name, which is required to start the quiz.<br>
 
-
 <div align="center">
   <img src="assets/images/feat-2.png" alt="buttons to use for entry to Matrix game>
 </div>
+
+
 
 ### Alert
 If a player clicks the **Start Quiz** button without typing their name.<br>
